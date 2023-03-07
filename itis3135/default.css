@@ -1,0 +1,13 @@
+
+body {
+    background-color:darkcyan;
+    color:chartreuse;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+input {
+    background-color: darkolivegreen;
+    color:darkorange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}

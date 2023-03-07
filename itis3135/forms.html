@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Activity #3- Forms</title>
+    <link href="styles/defualt.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+            <nav id="siteLinks">Nav Links Here:</nav>
+            <br>
+            <nav id="siteLinks2">Nav Links Here:</nav>
+        <br>
+        <h1>Activity #3 Forms</h1>
+    </header>
+    <main>
+        <form action=#>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value="" placeholder="Rusty Shackleford" required><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone" value="" size="10" placeholder="123-45-678" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" value="" size="25" placeholder="rshackleford@email.com" required><br><br>
+
+            <input type="checkbox" id="selection1" name="selection1" value="private">
+            <label for="selection1"> I am contacting you for myself</label><br>
+            <input type="checkbox" id="selection2" name="selection2" value="business">
+            <label for="selection2"> I am contacting you for my business</label><br>
+            <br>
+
+            <label for="rating">Please rate us!:</label>
+                <select name="rate" id="rate">
+                    <option value="1">Aweful</option>
+                    <option value="2">Okay</option>
+                    <option value="3">Good</option>
+                    <option value="4">Great</option>
+                </select>
+            <br>
+            <br>
+
+            Would you like our services?<br>
+            <input type="radio" name="1" id="yes">Yes<br>
+            <input type="radio" name="2" id="no">No
+            <br>
+              <button onclick="uncheck()">Uncheck</button>
+            <br>
+            <br>
+            <input type="submit" value="Submit form">
+          </form> 
+        
+    </main>
+    <footer>
+        
+        <p><br></p>
+
+        <p>Validation Links:    
+                      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.uncc.edu%2Fhgayhart%2Fitis3135" id="validation_link_html">W3 HTML</a> | 
+                      <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.uncc.edu%2Fhgayhart%2Fitis3135" id="validation_link_css">W3 CSS</a>
+        </p>
+        <p><a href="https://webpages.charlotte.edu/hgayhart/">Return to Home</a></p>
+
+        Site designed by <a href="https://webpages.charlotte.edu/hgayhart/itis3135/huntersdependablecontractors.com/huntersdependablecontractors.html">Hunter's Dependable Contractors &copy;</a> 2023
+    </footer>
+    <script src="scripts/default.js"></script>
+</body>
+</html>

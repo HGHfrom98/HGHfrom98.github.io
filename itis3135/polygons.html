@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Didact+Gothic&family=Inter:wght@300&display=swap');
+      </style>
+
+    <title>ITIS 3135 | Hunter Gayhart | Happy Gecko | Polygons</title>
+    <link href="styles/defualt.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="scripts/polygons.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="siteLinks">Nav Links Here:</nav>
+        <br>
+        <nav id="siteLinks2">Nav Links Here:</nav>
+        <br>
+        <h1>Polygons</h1>
+    </header>
+    <main>
+        <h2>Hunter's Happy Gecko demands you enter a number from one to six!</h2>
+
+        <form >
+            
+            <label for="number">Enter Number here</label><br>
+            <input type="number" id="number" name="number" value="" min="-6" max="6" placeholder="(1-6)" required><br>
+
+            <button onclick="getShape()" type='button'>Submit Number</button>
+        </form>
+
+    <br>
+
+        <h2>Your shape is a:</h2>
+        <h1 id="shape"></h1>
+
+        
+    </main>
+    <footer>
+        
+        <p><br></p>
+
+        <p>Validation Links:    
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.uncc.edu%2Fhgayhart%2Fitis3135" id="validation_link_html">W3 HTML</a> | 
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.uncc.edu%2Fhgayhart%2Fitis3135" id="validation_link_css">W3 CSS</a>
+        </p>
+
+        <p><a href="https://webpages.charlotte.edu/hgayhart/">Return to Home</a></p>
+
+        Site designed by <a href="https://webpages.charlotte.edu/hgayhart/itis3135/huntersdependablecontractors.com/huntersdependablecontractors.html">Hunter's Dependable Contractors &copy;</a> 2023
+    </footer>
+    <script src="scripts/default.js"></script>
+</body>
+</html>
