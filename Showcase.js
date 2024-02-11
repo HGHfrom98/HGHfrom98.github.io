@@ -163,5 +163,5 @@ function section10() {
 }
 
 function section11() {
-    alert("This section will be dedicated to my virtual network \n I am curently adding virtual workstations to my domain. \n Content will be added soon, though. Please check back in!");
+    alert("This section will be dedicated to my virtual network. \n I am curently adding virtual workstations to my domain. \n Content will be added soon, though. Please check back in!");
 }
