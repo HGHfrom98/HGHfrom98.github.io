@@ -1,0 +1,21 @@
+﻿#Set path variable. Edit the path to point to the .txt file containing the email addresses
+#$Path = 'C:\Users\GayhaH01\Documents\Testing.txt'
+$Path = 'FILE PATH'
+
+#get content from text file containing email addresses
+$emails = get-content -Path $Path
+
+#get ADUsers, filter by email name
+
+Foreach($email in $emails){
+    
+    #get ad users and filter by email name
+    $result = Get-ADUser -Filter {mail -like $email} -properties mail | Select-Object SamAccountName,Name,mail
+
+    #if $result variable is not empty, print data in the result variable
+    if ($result){$result}
+
+    #if $result is empty, print the email was not found
+    else{write-host "Email address $email not found"}
+
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--########## To DO ##########
+    Add dark mode color pallet change button
+-->
+
+    <head>
+
+        <title>Hunter Gayhart | Showcase</title>
+
+        <link href="./Showcase.css" rel="stylesheet">
+        <style>@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Didact+Gothic&family=Inter:wght@300&display=swap');</style>
+
+    </head>
+
+    <body>
+        <header>
+
+            <nav class="linksNav">
+                <p style="display: inline-block;"><a href="https://www.linkedin.com/in/hunter-gayhart-907243178/">LinkedIn</a></p>
+                <p style="display: inline-block; padding-left: 10px; padding-right: 10px;"> | </p>
+                <p style="display: inline-block;"><a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-homepage&_ga=2.45529572.1532735510.1707547787-1986851895.1684205548">indeed</a></p>
+            </nav>
+
+                <div class="navbar">
+                    <h1 class="navTitle">Hunter's Showcase</h1>
+                    <a style="margin-left: 10px;" onclick=section1()>Home</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Tools 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                        <div class="dropdown-content">
+                            <a onclick="section2()">AutoHotKey</a>
+                            <a onclick="section3()">Asset Check</a>
+                            <a onclick="section4()">Knowledge base</a>
+                            <a onclick="section5()">Door Data</a>
+                            <a onclick="section6()">Mail Merge</a>
+                            <a onclick="section7()">Sales</a>
+                            <a onclick="section8()">PowerShell</a>
+                            <a onclick="section9()">Coordinator PO Search</a>
+                            <a onclick="section10()">Documentation</a>
+                        </div>
+                    </div>
+                    <a style="margin-left: 10px;" onclick="section11()">Home Lab</a>
+                </div>
+    </header>
+
+
+            <Main>
+                <section id="section1">
+                    <!--Home-->
+                    <h2>Showcase Home</h2>
+                    <p>This page is to showcase all of my professional and hobbiest projects. Thank you for visiting!</p>
+
+                    <!--About me-->
+                    <p>
+                        <figure>
+                            <img height="50%" width="50%" src="./Content/Other/profile _cropped.jpg" alt="Profile Picture">
+                            <figcaption>A picture of me in front of the USS North Carolina in Wilmington, NC.</figcaption>
+                        </figure>
+                        Hi, my name is Hunter Gayhart.<br>
+                        I am a recent computer science graduate from the University of North Carolina at Charlotte. I currently hold a position as a tier 2 desktop support technician here in Charlotte.<br>
+                        I am A+ certified under CompTIA's 900 series and I have two and a half years of hands-on experience to validate this certification in the form of several IT projects and a position maintaining hardware for 28 State Employee's Credit Union locations.<br>
+                        My eventual aim is to hold a position as a system administrator or possibly as a security analyst. If I'm able to continue learning from there, I would like to pursue a career as a penetration tester.<br>
+                        To pursue this goal further, I plan on testing for the CompTIA Security+ certification in the near future.<br>
+                    </p>
+                </section>
+
+                <section id="section2">
+                    <!--AutoHotKey-->
+                    <h2>AutoHotKey</h2>
+                    <p>
+                        I have automated several processes using AutoHotKey, a free and open-source scripting language that allows for macro creation.<br>
+                        If you would like to install AutoHotKey, please follow <a href="https://www.microsoft.com/store/productId/9NQ8Q8J78637?ocid=pdpshare">this link</a> to the Microsoft Store.<br>
+                        <br>
+                        Most of my AHK scripts utilize screen coordinates, nested loops, and the clipboard. I implemented a universal suspend, pause, and unpause hotkey for each application.<br>
+                        This way, I stop the script at any point, provide assistance and the script will pick up where it left off.<br>
+                        For processes that take some time, the macro is set to lock the PC on exit.<br>
+                        <br>
+                        A few examples and demonstrations can be seen below:
+                        <br>
+                        <br>
+                        AHK-Pull data - Searches provided serial numbers and copies data from an internal system. This tool allows me to update necessary information for the entire team.<br>
+                        I tried to webscrape using curl, but authentication is blocked, so this is the next best solution.<br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kUjICjDDiww?si=1xR8qEm9AKUs-pGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+                        Feel free to download this script <a href = './Content/AutoHotKey/pull_data_full_week.ahk' download="AHK-Pull-Data">here</a>
+                        <br>
+                        <br>
+                        AHK- Tech sign off - The technician sign off process essentially adds and confirms a new serial number for end-of-lease assets. This process must be completed manually and the<br>
+                        data is provided to our team piecemeal over time. This tool allows me to confirm every record is updated correctly once all data is provided.<br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qis0DR90_R4?si=hdGfolfl8iLbuZKX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+                        Feel free to download this script <a href = './Content/AutoHotKey/TSO_full-week.ahk' download="AHK-TSO">here</a>
+                        <br>
+                        <br>
+                        AHK- UPS label creation - This script automates the creation of UPS labels through an internal application.<br>
+                        I created a version that waits on user confirmation before generating labels, but I deemed it unnecessary as the script has not generated any incorrect labels yet.<br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/NEaLd7_0HwY?si=qoOhbrpIcqEsTmE7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+                        Feel free to download this script <a href = './Content/AutoHotKey/UPS_labels_full_week.ahk' download="AHK-UPS-Labels">here</a>
+                    </p>
+                </section>
+
+                <section id="section3">
+                    <!--Asset Checker-->
+                    <h2>Asset Checker</h2>
+                    <p>
+                        The existing process our team used to check the return status of an asset was extensive and time-consuming.<br>
+                        Technicians would query two separate workbooks and search our vendor's website manually for each serial number.<br>
+                        This process could take quite some time depending on how many assets were being queried.<br>
+                        <br>
+                        I created an online spreadsheet that pulls in data from both workbooks and checks this data against the provided values.<br>
+                        A technician could theoretically paste in hundreds of serial numbers and be provided with an instant confirmation of return.<br>
+                        Additionally, there is a concatenated hyperlink generated for each serial number of easy searching of our vendor's database.<br>
+                        <br>
+                        <figure>
+                            <img height="400" width="800" src="./Content/Asset Checker/Asset Check.png" alt="asset checker">
+                            <figcaption>A screenshot of the tool in use.</figcaption>
+                        </figure>
+                        <br>
+                        Unfortunately, the queried workbooks are internal and cannot be shared publicly.<br>
+                        I did create a template of this tool that is available for download <a href="./Content/Asset Checker/Asset Check Template.xlsx" download="Asset_Check_Template">here</a>.<br>
+                    </p>
+                </section>
+
+                <section id="section4">
+
+                    <h2>Knowledge Base</h2>
+
+                    <p>
+                        When I started, my department did not have any formal online libraries for new employees or troubleshooting.<br>
+                        I created a online OneNote knowledge base that is accessible and editable by all team members.<br>
+                        I have worked with my peers to add their personal notes to the knowledge base.<br>
+                        <br>
+                        The document includes uncommon troubleshooting solutions (cases) and documentation for each role within our department.<br>
+                        Unfortunately, there are techniques and operations specific to the corporate environment within my documentation, so I can only provide only a screenshot.<br>
+                        <figure>
+                            <img height="500" width="800" src="./Content/Knowledge Base/Knowledge Base.png" alt="Knowledge Base">
+                            <figcaption>A screenshot of the Knowledge Base depicting a guide I created to assist my coworkers with an intricate process.</figcaption>
+                        </figure>
+                    </p>
+
+                </section>
+
+                <section id="section5">
+                    <!--Door Data-->
+                    <h2>Door Data</h2>
+                    <p>
+                        My team lead was discussing the possibility of letting some technicians work from home, but they were unsure about which days were busiest for corporate pickups and drop offs.<br>
+                        I took it upon myself to process the data that was available in the form of drop off and pickup confirmation emails.<br>
+                        To do so, I pulled the data from Outlook, compiled, and formatted it, then created statistics based on each day of the week.<br>
+                        <figure>
+                            <img height="400" width="800" src="./Content/Door Data/Door Data.png" alt="door data">
+                            <figcaption>A screenshot of the Door Data workbook detailing the busiest days of the week.</figcaption>
+                        </figure>
+                        
+                        This workbook is available for download <a href="./Content/Door Data/Door Data.xlsx" download="Door_Data">here</a>.<br>
+                        While the content is likely irrelevant outside of the office, you may find the formulas for managing dates and comparing lists useful.
+                    </p>
+                </section>
+
+                <section id="section6">
+                    <!--Mail Merge-->
+                    <h2>Mail Merge</h2>
+                    <p>
+                        Mail merge is a useful Microsoft Office feature that allows you to pull data from Excel into Word to send emails through Outlook.<br>
+                        <br>
+                        The team I am on is responsible for sending on average 90 emails a week outside of support or requests. The data in these emails is available within an Excel workbook,<br>
+                        so to save time, I automated the process using Mail Merge.<br>
+                        After the success I had using mail merge, I decided to write a guide and aid my coworkers to automate their emails.<br>
+                        If you would like to download the guide, it is available <a href = './Content/Mail Merge/Mail Merge Instructions.docx' download="Mail Merge instructions">here</a><br>
+                        If you would like to download the sample Excel sheet, it is available <a href = './Content/Mail Merge/Sample offline refresh sheet.xlsx' download="Mail Merge sample sheet">here</a><br>
+                    </p>
+                </section>
+
+                <section id="section7">
+                    <!--Sales-->
+                    <h2>Sales</h2>
+                    <p>
+                        After three months in my technician role, I was trusted with the responsibility of supporting all salespeople within the company. A majority of this responsibility entails<br> 
+                        providing and receiving sales assets. Over the next month, I revolutionized and standardized this process.<br>
+                        <br>
+                        Process:<br>
+                        --------<br>
+                        When a request for a new user is received, I provision a machine by creating an 'Outgoing card' to ensure all necessary steps are followed.<br>
+                        When a machine is received be it from a retiring salesperson or closure, the asset is labeled with an 'Incoming Card' to ensure all necessary steps are followed.<br>
+                        All sales assets are documented on an inventory sheet I manage.<br>
+                        <figure>
+                            <img height="400" width="800" src="./Content/Sales/Sales Inventory.png" alt="sales inventory">
+                            <figcaption>Above is a redacted screenshot of the sales inventory sheet from February 2024.</figcaption>
+                        </figure>
+                        <br>
+                        If you would download either process management cards, please select the links below:<br>
+                        <a href = './Content/Sales/Sales Incoming cards.docx' download="sales_incoming_cards">Sales incoming cards</a> | 
+                        <a href = './Content/Sales/Sales Outgoing cards.docx' download="sales_outgoing_cards">Sales outgoing cards</a>
+                        <br>
+                    </p>
+                </section>
+
+                <section id="section8">
+                    <!--PowerShell-->
+                    <h2>PowerShell</h2>
+                    <p>
+                        I utilize PowerShell to help automate some processes that benefit both my team and I.<br>
+                        All downloadable scripts are saved as text files. Please see a few examples below:<br>
+                        <br>
+                        Last login - Used to determine the last time that a user authenticated to the domain.<br>
+                        Feel free to download this script <a href = './Content/PowerShell/last_LogIn_Check.txt' download="Last_login_check">here</a><br>
+                        <br>
+                        Email validator - Takes in a list of user emails and isolates those that are not associated with an object in AD.<br>
+                        Feel free to download this script <a href = './Content/PowerShell/Email_Validator.txt' download="Email_validator">here</a><br>
+                        <br>
+                        Both of these tools were shared with me. Thanks to my mentor, Jake!<br>
+                    </p>
+                </section>
+
+                <section id="section9">
+                    <!--Coordinator PO Search-->
+                    <h2>Coordinator PO Search</h2>
+                    <p>
+                        A little background is needed to understand the purpose of the attached tool.<br>
+                        Every Friday, the coordinator team in my department designates one person to manually search ~250 purchase order numbers in Outlook.<br>
+                        This practice has been in place since the beginning of the department.<br>
+                        <br>
+                        The attached tool saves the coordinator team roughly 2 hours of manual labor each week.<br>
+                        The linked Excel sheet concatenates up to 50 purchase order numbers, adding an OR operand between each.<br>
+                        From here, Outlook can be queried 5 times, while flagging notable emails. This takes minutes, not hours.<br>
+                        <br>
+                        Feel free to download this workbook <a href = './Content/Coordinator PO Search/Coordinator PO Search.xlsx' download="Coordinator_PO_Search">here</a>
+                        <br>
+                    </p>
+                </section>
+
+                <section id="section10">
+                    <!--Documentation-->
+                    <h2>Documentation</h2>
+                    <p>
+                        I have created some documentation for a few issues that users experience most often.<br>
+                        Please feel free to browse some of this documentation below:<br>
+                        <br>
+                        Targus Docking Stations that will soon be introduced to our users.<br>
+                        Feel free to download this document <a href = './Content/Documentation/Targus dock.pdf' download="Targus_documentation">here</a>
+                        <br>
+                        <br>
+                        OneDrive setup guide for the pre and post-refresh process.<br>
+                        Feel free to download this document <a href = './Content/Documentation/OneDrive Setup Guide.docx' download="OneDrive_setup_guide">here</a>
+                        <br>
+                        <br>
+                        Chrome Bookmark guide detailing how to export and import saved bookmarks.<br>
+                        Feel free to download this document <a href = './Content/Documentation/Chrome Bookmarks Guide.docx' download="">here</a>
+                        <br>
+                        <br>
+                        Zscaler setup guide. Zscaler is an endpoint-based firewall that is notorius for causing issues with new Windows installations within my organization.<br>
+                        This guide is a quick and easy preventative measure in-case Zscaler prevents the automatic installation of other software.<br>
+                        Feel free to download this document <a href = './Content/Documentation/Zscaler Setup Guide.docx' download="">here</a>
+                        <br>
+                    </p>
+                </section>
+
+
+            </Main>
+    </body>
+
+    <footer>
+        
+        &nbsp;
+        <p style="padding-left: 20%; margin-bottom: -10px;">Thank you so much for visiting! Please feel free to <a href="mailto:huntergayhart@Gmail.com">contact me</a> if you have any questions, concerns, suggestions, or oportunities.</p>
+        <p style="padding-left: 45%;">Hunter Gayhart 2024</p>
+
+        <!--JavaScript-->
+        <script src="./Showcase.js"></script>
+
+        <!--CSS-->
+        <style src></style>
+
+    </footer>
+
+</html>
