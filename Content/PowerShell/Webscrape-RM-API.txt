@@ -1,0 +1,43 @@
+﻿#Declare URIs
+$URI1 = 'APIURIaddress'
+$URI2 = 'APIURIaddress'
+# Declare path
+$Path = 'filepath'
+
+# Get Data
+$records = Get-Content -Path $Path
+
+# forEach loop
+forEach ($record in $records) {
+    # Split values
+    $record = $record.split(' ')
+
+    # Set each split half to a variable
+    $RID = $record[0]
+    $AssetGroup = $record[1]
+
+    # Appends each value to the url
+    $URI1 += $RID
+    $URI2 += $AssetGroup
+
+    #Invoke restMethod cmdlets with appropriate method argument and default credentials
+    $restMethod1 = Invoke-RestMethod -Uri $URI1 -Method Post -UseDefaultCredentials
+    $restMethod2 = Invoke-RestMethod -Uri $URI2 -Method Post -UseDefaultCredentials
+
+    # All returned Data
+    #$restMethod1.Data
+    #$restMethod2.Data
+
+    # Set variables to appropriate values
+    $RID = $restMethod1.data.RefreshID
+    $assetTag = $restMethod2.data.AssetTag
+    $oldModel = $restMethod2.data.ItemDescription
+
+    # Write vaules to host
+    Write-Host $RID $assetTag $oldModel
+
+    # Remove appended values from url prior to the next iteration
+    $URI1 = 'APIURIaddress'
+    $URI2 = 'APIURIaddress'
+}
+

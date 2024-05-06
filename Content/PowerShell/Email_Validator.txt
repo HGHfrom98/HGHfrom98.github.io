@@ -1,5 +1,4 @@
 ﻿#Set path variable. Edit the path to point to the .txt file containing the email addresses
-#$Path = 'C:\Users\GayhaH01\Documents\Testing.txt'
 $Path = 'FILE PATH'
 
 #get content from text file containing email addresses

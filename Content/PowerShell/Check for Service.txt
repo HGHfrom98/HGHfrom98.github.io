@@ -1,0 +1,23 @@
+﻿#If one were to add this file and it's text file to a share drive, they could schedule a task to run this on all
+# computers within a security group to check if a specific service is running.
+
+# Instantiates variables for service, SN, and lookFor
+$service = $SN = ''
+$lookFor = 'SNMPTRAP' # <---- Enter service name here.
+
+# Sets the Enviornment Variable value for each variable on line 2
+$service = (Get-WmiObject -Class Win32_Service).Name
+$SN = (Get-ChildItem Env:COMPUTERNAME).Value
+
+# If $lookFor is found within $service
+if ($service.Contains($lookFor)) {
+    
+    # Adds SN to a text file.
+    Add-Content -Path 'filepath' -Value $SN
+
+    # Prints the SN to console.
+    Write-Host 'Found lookFor service: ' $lookFor 'on ' $SN
+} else {
+    # If not found, prints the following:
+    Write-Host 'service not running'
+}

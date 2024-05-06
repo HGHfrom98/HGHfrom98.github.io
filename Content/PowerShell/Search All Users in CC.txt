@@ -1,0 +1,14 @@
+﻿# Change variables below as needed
+$CC = 11389
+
+    # For each user in designated cost center, do:
+    forEach ($CCUsers in $CC) {
+
+        # Variable declaration to for all user accounts in the specified cost center
+        $Users = Get-ADUser -Filter 'CostCenter -eq $CCUSers'
+
+        # For each defined user, print the details below by instantiating variable methods 
+        forEach($User in $Users) {
+            Write-Host "Name: " $User.Name "`n Email: " $User.UserPrincipalName
+        }
+    }

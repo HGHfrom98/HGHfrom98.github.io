@@ -1,0 +1,19 @@
+﻿# Set path to file containing emails
+$Path = 'filepath'
+
+# Pull data from path
+$CC = Get-Content -Path $Path
+
+# For each email in the provided file:
+foreach($currentCC in $CC) {
+
+    # Instantiate variable
+
+    $fName = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties GivenName).GivenName
+    $lName = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties Surname).Surname
+    $email = (Get-ADUser -Filter {extensionAttribute3 -eq $user} -Properties UserPrincipalName).UserPrincipalName
+
+    Write-Host ""
+    Write-Host "Users in CC $currentCC :"
+    Write-Host "$fName $lName , $email"
+}

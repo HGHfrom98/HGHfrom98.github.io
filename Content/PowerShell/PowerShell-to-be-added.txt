@@ -1,0 +1,49 @@
+I utilize PowerShell to help automate some processes that benefit both my team and I.
+All downloadable scripts are saved as text files. Please see a few examples below:
+
+<KEEP LAST LOGIN and EMAIL VALIDATOR ON WEBSITE>
+
+<b>Check for process</b> - Used to check if a specified process is running on a computer. This can be used on the local device or on any remote domain computer.
+Feel free to download this script here.
+
+<b>Check for service</b> - Used to check if a specified service is running on a computer. This can be used on the local device or on any remote domain computer.
+Feel free to download this script here.
+
+<b>Pull Env data from machine to txt</b> - Used to pull enviornment data from a local or remote specified machine. Data is written to a text file.
+Feel free to download this script here.
+
+<b>Pull_Emails_based_on_name</b> - Takes in a list of space seperated first and last names and writes a list of UserPrincipalNames (email address') if the name is recognized in AD.
+Feel free to download this script here.
+
+<b>Pull_User_Data_Exp_to_CSV</b> - Takes in a list of user emails and writes requested information to a csv file.
+Feel free to download this script here.
+
+<b>Pull_Single_User_Data</b> - Used to pull account information from a specific user.
+Feel free to download this script here.
+
+<b>Search All Users in CC</b> - Pulls all users within a specified cost center. This script can be quickly adapted to search for all users within any specified property such as a department or location.
+Feel free to download this script here.
+
+<b>Search by CC</b> - Pulls the cost center from a list of user emails. his script can be quickly adapted to search for any specified property as long as you have the user's email address.
+Feel free to download this script here.
+
+<b>Search by single CC</b> - Pulls the cost center from a singular user email.
+Feel free to download this script here.
+
+
+The scripts listed below utilize the Invoke-WebRequest and Invoke-RestMethod cmdlets to allow webscraping and REST API requests.
+These requests cannot be tested as the internal website that I wrote these scripts for requires authentication.
+
+<b>Webscrape-RM-PS</b> - Connects to a specified webpage and pulls the innertext of a specified HTML element.
+Feel free to download this script here.
+
+<b>Webscrape-RM-API</b> - Makes two API calls to pull data directly from the SQL database that powers our internal website.
+Feel free to download this script here.
+
+<b>Webscrape-TransferRecords</b> Makes an API call to pull asset transfer history from our SQL database.
+Feel free to download this script here.
+
+<b>Webscrape-Post-TSO</b> This script makes a REST API POST request to push data to our internal SQL database.
+This script still does not work correctly, but it serves as a great example for building POST requests bodies, making REST API POST requests, and pulling request verification tokens (XSRF tokens).
+If you feel comfortable making such requests, please feel free to contact me. I would love to work with you to get a similar request to work.
+Feel free to download this script here.

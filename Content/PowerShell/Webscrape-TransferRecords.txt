@@ -1,0 +1,43 @@
+﻿#Declare URIs
+$URI = 'APIURIaddress'
+$appendValue = '&serialNumber='
+
+# Declare path
+$Path = 'filepath'
+
+# Get Data
+$records = Get-Content -Path $Path
+
+# forEach loop
+forEach ($record in $records) {
+    # Split values
+    $record = $record.split(' ')
+
+    # Set each split half to a variable
+    $SN = $record[0]
+    $AG = $record[1]
+
+    # Appends each value to the url
+    $URI += $AG += $appendValue += $SN
+
+    #Invoke restMethod cmdlets with appropriate method argument and default credentials
+    $restMethod = Invoke-RestMethod -Uri $URI -Method Post -UseDefaultCredentials
+
+    # All returned Data - specify last transfer via [0]
+    #$restMethod.Data
+
+    # Checks if transfer data populated- if so, print each value - if not, write it has not been transferred
+    if ($restMethod.Data -ne $null) {
+        $transferID = $restMethod.Data[0].TransferID
+        $oldCC = $restMethod.Data[0].OldCostCenter
+        $oldUser = $restMethod.Data[0].OldAssociateID
+
+        Write-Host $SN','$transferID','$oldUser','$oldCC
+
+    } else {Write-Host $SN 'has not been transferred'}
+
+
+    # Remove appended values from url prior to the next iteration
+    $URI = 'APIURIaddress'
+}
+

@@ -1,0 +1,22 @@
+﻿# Change variables below as needed
+$CC = 11389
+$name = 'Gayhart'
+
+    # For each user in designated cost center, do:
+    forEach ($item in $CC) {
+        # Variable declaration for this row
+        $fName = (Get-ADUser -Filter {extensionAttribute3 -eq $item} -Properties GivenName).GivenName
+        $lName = (Get-ADUser -Filter {extensionAttribute3 -eq $item} -Properties Surname).Surname
+        $email = (Get-ADUser -Filter {extensionAttribute3 -eq $item} -Properties UserPrincipalName).UserPrincipalName
+
+        $foundEmail = (Get-ADUser -Filter {(extensionAttribute3 -eq $item) -and (Surname -eq $name)} -Properties UserPrincipalName).UserPrincipalName
+
+        # If name is found within last name, do:
+        if (($lName -contains $name) -or ($email -contains $name)) {
+            Write-Host "`n Found the user $name within cost center $CC, their email is $foundEmail" 
+        } else { Write-Host "`n User $name not found in cost center $CC."
+            #Remove the '#' below, if you want all emails in the CC to populate.
+            # Write-Host "`n`n Emails in cost center $CC : `n`n $email"
+        }
+
+    }

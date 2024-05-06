@@ -1,0 +1,47 @@
+﻿#-----== Pull Request Verification Token ==-----
+# Set URL
+$URL = 'APIURIaddress'
+
+#Invoke restMethod cmdlet with appropriate method argument and default credentials
+$URLRestMethod = Invoke-WebRequest -Uri $URL -UseDefaultCredentials
+
+# Pulls the request verification token
+$token = [regex]::Match($URLRestMethod, '(?<=name="__RequestVerificationToken" type="hidden" value=")(.*?)(?=")').Value
+
+
+
+#-----== Body of POST request ==-----
+# Instantiate request body attributes
+$RefreshID =  'RID000000059206' # Will be from txt file
+$Date = Get-Date -Format 'MM/dd/yyyy'
+    $EncodedDate = '05%2F01%2F2024' # ---Maybe try encoded values?
+$tech = 'USERID' # userID for corrospondign tech Will be from txt file
+$newSN = 'SN' # Will be from txt file
+
+# Set up hashmap for request body
+$body = @{
+    '__RequestVerificationToken' = $token
+    'refreshId' = $RefreshID
+    'status' = 'signoff'
+    'date' = $Date
+    'technician' = $tech
+    'replacementModel' = ''
+    'replacementSN' = $newSN
+    'serverId' = 'NO DATA TRANSFER'
+    'comments' = 'TEST'
+}
+
+# Convert the hashmap to JSON
+$jsonBody = $body | ConvertTo-Json
+
+
+
+#-----== Send API Post request using XSFR token ==-----
+# Declare URIs
+$URI = 'APIURIaddress'
+
+# Invoke restMethod cmdlet with appropriate method argument and default credentials
+$URIRestMethod = Invoke-RestMethod -Uri $URI -Method Post -Body $jsonBody -ContentType 'application/json' -UseDefaultCredentials
+
+# Display Response
+$URIRestMethod

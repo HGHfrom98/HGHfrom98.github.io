@@ -1,0 +1,18 @@
+﻿# Set User's email
+$user = 'email'
+
+# Instantiate variables
+$fName = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties GivenName).GivenName
+$lName = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties Surname).Surname
+$email = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties mail).mail
+$userID = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties SamAccountName).SamAccountName
+$CC = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties CostCenter).CostCenter
+$Address1 = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties State).State
+$Address2 = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties StreetAddress).StreetAddress
+
+
+    # If the email address is valid, print variables
+    if ($email) {
+        #Write-Host "$fname $lname,$email,$userID,$CC,$Address1,$Address2"
+        Write-Host "`n $fname $lname `n $email `n $userID `n $CC `n $Address1 `n $Address2"
+    } else {write-host "Email address $user not found"}

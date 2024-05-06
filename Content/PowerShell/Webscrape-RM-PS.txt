@@ -1,0 +1,10 @@
+﻿# Set URL
+$URL = Invoke-WebRequest -Uri 'APIURIaddress' -UseDefaultCredentials
+
+# Pulls all innertext from elements with the specified tag name
+#$URL.AllElements | where tagname -EQ "li" | select outertext
+$DataArray = $URL.AllElements | where tagname -EQ "td" | select innerText
+
+
+# Print array values
+Write-Host 'RID: ' $DataArray[0].innerText `n'Asset Tag: ' $DataArray[4].innerText

@@ -1,0 +1,24 @@
+﻿# Declare path
+$Path = 'filepath'
+
+# Get Data
+$Names = Get-Content -Path $Path
+
+# forEach loop
+forEach ($name in $Names) {
+    
+    # Split values
+    $name = $name.split(' ')
+
+    # Set each split half to a variable
+    $lName = $name[0]
+    $fName = $name[1]
+
+    # Set variables to first and last names
+    $user = (Get-ADUser -Filter "GivenName -eq '$lName' -and Surname -eq '$fName'" -Properties UserPrincipalName -ErrorAction SilentlyContinue).UserPrincipalName
+    
+    # If found, print email, else print first and last name
+    If($user) {
+        Write-Host $user
+    } else {Write-Host "*Email Not Found*" $fName $lName}
+}

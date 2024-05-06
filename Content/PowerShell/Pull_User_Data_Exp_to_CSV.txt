@@ -1,0 +1,30 @@
+﻿# Set path to file containing emails
+$Path = 'filepath'
+
+# Pull data from path
+$emails = Get-Content -Path $Path
+
+# For each email in the provided file:
+foreach($user in $emails) {
+
+    # Instantiate variables
+    $fName = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties GivenName).GivenName
+    $lName = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties Surname).Surname
+    $email = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties mail).mail
+    $userID = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties SamAccountName).SamAccountName
+    $CC = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties CostCenter).CostCenter
+    $Address1 = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties State).State
+    $Address2 = (Get-ADUser -Filter {UserPrincipalName -eq $user} -Properties StreetAddress).StreetAddress
+
+
+    # If the email address is valid, print variables
+    if ($email) {
+        #Write-Host "$fname $lname,$email,$userID,$CC,$Address1,$Address2"
+        Add-Content -Path 'filepath' -Value "$fname $lname,$email,$userID,$CC,$Address1,$Address2"
+    }
+
+    #if variables were empty, print the email was not found
+    else{write-host "Email address $user not found"}
+
+
+}

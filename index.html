@@ -3,9 +3,13 @@
 
 <!--########## To DO ##########
     Add dark mode color pallet change button
+    Add functionality to increase the padding at the top of the page on mobile devices only
 -->
 
     <head>
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <meta http-equiv='pragma' content='no-cache'>
 
         <title>Hunter Gayhart | Showcase</title>
 
@@ -41,223 +45,518 @@
                             <a onclick="section8()">PowerShell</a>
                             <a onclick="section9()">Coordinator PO Search</a>
                             <a onclick="section10()">Documentation</a>
+                            <a onclick="section11()">HTT Website</a>
+                            <a onclick="section12()">Intune Login Data</a>
+                            <a onclick="section13()">Missing assets</a>
                         </div>
                     </div>
-                    <a style="margin-left: 10px;" onclick="section11()">Home Lab</a>
+                    <!--<a style="margin-left: 10px;" onclick="section14()">Home Lab</a>-->
+                    <div class="dropdown">
+                        <button class="dropbtn">Home Lab
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                        <div class="dropdown-content">
+                            <a onclick="section14()">Updates</a>
+                            <a onclick="section15()">GPO Script Execution</a>
+                            <a onclick="section16()">Access Control</a>
+                            <a onclick="section17()">Securing the Domain</a>
+                        </div>
+                    </div>
                 </div>
     </header>
 
 
             <Main>
-                <section id="section1">
-                    <!--Home-->
-                    <h2>Showcase Home</h2>
-                    <p>This page is to showcase all of my professional and hobbyist projects. Thank you for visiting!</p>
+                <div id="content">
+                    <section id="section1">
+                        <!--Home-->
+                        <h2>Showcase Home</h2>
+                        <p>This page is to showcase all of my professional and hobbyist projects. Thank you for visiting!</p>
 
-                    <!--About me-->
-                    <p>
-                        <figure>
-                            <img height="50%" width="50%" src="./Content/Other/profile _cropped.jpg" alt="Profile Picture">
-                            <figcaption>A picture of me in front of the USS North Carolina in Wilmington, NC.</figcaption>
-                        </figure>
-                        Hi, my name is Hunter Gayhart.<br>
-                        I am a computer science graduate from the University of North Carolina at Charlotte. I currently hold a position as a tier 2 desktop support technician here in Charlotte. I am Security+ & A+ certified. I have three years of hands-on experience to validate these certifications in the form of several IT projects. A few notable examples include my current role where I am solely responsible for preparing and providing hardware for all salespeople within a fortune 500 company in addition to my desktop support role. In the past, I held a position maintaining hardware for 28 Credit Union locations spanning Eastern NC.
-                        <br>
-                        My next goal is to hold a position as a system administrator or possibly as a security analyst. My eventual aim is to pursue a career as a security engineer or SOAR engineer.
-                        To pursue this goal further, I plan on pursuing the CompTIA CySA+ in the near future and a Masters in Cybersecurity down the road.<br>
-                    </p>
-                </section>
+                        <!--About me-->
+                        <p>
+                            <figure>
+                                <img height="50%" width="50%" src="./Content/Other/profile _cropped.jpg" alt="Profile Picture">
+                                <figcaption>A picture of me in front of the USS North Carolina in Wilmington, NC.</figcaption>
+                            </figure>
+                            Hi, my name is Hunter Gayhart.<br>
+                            I am a computer science graduate from the University of North Carolina at Charlotte. I currently hold a position as a tier 2 desktop support technician here in Charlotte. I am Security+ & A+ certified. I have three years of hands-on experience to validate these certifications in the form of several IT projects. A few notable examples include my current role where I am solely responsible for preparing and providing hardware for all salespeople within a fortune 500 company in addition to my desktop support role. In the past, I held a position maintaining hardware for 28 Credit Union locations spanning Eastern NC.
+                            <br>
+                            My next goal is to hold a position as a system administrator or possibly as a security analyst. My eventual aim is to pursue a career as a security engineer or SOAR engineer.
+                            To pursue this goal further, I plan on pursuing the CompTIA CySA+ in the near future and a Masters in Cybersecurity down the road.<br>
+                        </p>
+                    </section>
 
-                <section id="section2">
-                    <!--AutoHotKey-->
-                    <h2>AutoHotKey</h2>
-                    <p>
-                        I have automated several processes using AutoHotKey, a free and open-source scripting language that allows for macro creation.<br>
-                        If you would like to install AutoHotKey, please follow <a href="https://www.microsoft.com/store/productId/9NQ8Q8J78637?ocid=pdpshare">this link</a> to the Microsoft Store.<br>
-                        <br>
-                        Most of my AHK scripts utilize screen coordinates, nested loops, and the clipboard. I implemented a universal suspend, pause, and unpause hotkey for each application.<br>
-                        This way, I stop the script at any point, provide assistance and the script will pick up where it left off.<br>
-                        For processes that take some time, the macro is set to lock the PC on exit.<br>
-                        <br>
-                        A few examples and demonstrations can be seen below:
-                        <br>
-                        <br>
-                        AHK-Pull data - Searches provided serial numbers and copies data from an internal system. This tool allows me to update necessary information for the entire team.<br>
-                        I tried to webscrape using curl, but authentication is blocked, so this is the next best solution.<br>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kUjICjDDiww?si=1xR8qEm9AKUs-pGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
-                        Feel free to download this script <a href = './Content/AutoHotKey/pull_data_full_week.ahk' download="AHK-Pull-Data">here</a>
-                        <br>
-                        <br>
-                        AHK- Tech sign off - The technician sign off process essentially adds and confirms a new serial number for end-of-lease assets. This process must be completed manually and the<br>
-                        data is provided to our team piecemeal over time. This tool allows me to confirm every record is updated correctly once all data is provided.<br>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qis0DR90_R4?si=hdGfolfl8iLbuZKX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
-                        Feel free to download this script <a href = './Content/AutoHotKey/TSO_full-week.ahk' download="AHK-TSO">here</a>
-                        <br>
-                        <br>
-                        AHK- UPS label creation - This script automates the creation of UPS labels through an internal application.<br>
-                        I created a version that waits on user confirmation before generating labels, but I deemed it unnecessary as the script has not generated any incorrect labels yet.<br>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/NEaLd7_0HwY?si=qoOhbrpIcqEsTmE7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
-                        Feel free to download this script <a href = './Content/AutoHotKey/UPS_labels_full_week.ahk' download="AHK-UPS-Labels">here</a>
-                    </p>
-                </section>
+                    <section id="section2">
+                        <!--AutoHotKey-->
+                        <h2>AutoHotKey</h2>
+                        <p>
+                            I have automated several processes using AutoHotKey, a free and open-source scripting language that allows for macro creation.<br>
+                            If you would like to install AutoHotKey, please follow <a href="https://www.microsoft.com/store/productId/9NQ8Q8J78637?ocid=pdpshare">this link</a> to the Microsoft Store.<br>
+                            <br>
+                            Most of my AHK scripts utilize screen coordinates, nested loops, and the clipboard. I implemented a universal suspend, pause, and unpause hotkey for each application.<br>
+                            This way, I stop the script at any point, provide assistance and the script will pick up where it left off.<br>
+                            For processes that take some time, the macro is set to lock the PC on exit.<br>
+                            <br>
+                            A few examples and demonstrations can be seen below:
+                            <br>
+                            <br>
+                            AHK-Pull data - Searches provided serial numbers and copies data from an internal system. This tool allows me to update necessary information for the entire team.<br>
+                            I tried to webscrape using curl, but authentication is blocked, so this is the next best solution.<br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kUjICjDDiww?si=1xR8qEm9AKUs-pGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+                            Feel free to download this script <a href = './Content/AutoHotKey/pull_data_full_week.ahk' download="AHK-Pull-Data">here</a>
+                            <br>
+                            <br>
+                            AHK- Tech sign off - The technician sign off process essentially adds and confirms a new serial number for end-of-lease assets. This process must be completed manually and the<br>
+                            data is provided to our team piecemeal over time. This tool allows me to update, correct, and ensure the accuracy of every refresh record our department has worked on from the end of 2022 to today.
+                            At the time of writing (4/1/24), this is 6,620 records over 15 months.
+                            The script recognizes which technican was responsoble for the record and selects the appropriate technican from the dropdown based on this.
+                            All incomplete records have been documented to visit in the future when our vendor provides more information.
+                            I plan to continue this project indefinitely for each techinical as data becomes available each week.<br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZoDk30ypq9Y?si=0_H96zo2Fl3PFBkO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+                            Feel free to download this script <a href = './Content/AutoHotKey/TSO_Full-Week_ind-tech.ahk' download="AHK-TSO">here</a>
+                            <br>
+                            <br>
+                            AHK- UPS label creation - This script automates the creation of UPS labels through an internal application.<br>
+                            I created a version that waits on user confirmation before generating labels, but I deemed it unnecessary as the script has not generated any incorrect labels yet.<br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NEaLd7_0HwY?si=qoOhbrpIcqEsTmE7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+                            Feel free to download this script <a href = './Content/AutoHotKey/UPS_labels_full_week.ahk' download="AHK-UPS-Labels">here</a>
+                        </p>
+                    </section>
 
-                <section id="section3">
-                    <!--Asset Checker-->
-                    <h2>Asset Checker</h2>
-                    <p>
-                        The existing process our team used to check the return status of an asset was extensive and time-consuming.<br>
-                        Technicians would query two separate workbooks and search our vendor's website manually for each serial number.<br>
-                        This process could take quite some time depending on how many assets were being queried.<br>
-                        <br>
-                        I created an online spreadsheet that pulls in data from both workbooks and checks this data against the provided values.<br>
-                        A technician could theoretically paste in hundreds of serial numbers and be provided with an instant confirmation of return.<br>
-                        Additionally, there is a concatenated hyperlink generated for each serial number of easy searching of our vendor's database.<br>
-                        <br>
-                        <figure>
-                            <img height="400" width="800" src="./Content/Asset Checker/Asset Check.png" alt="asset checker">
-                            <figcaption>A screenshot of the tool in use.</figcaption>
-                        </figure>
-                        <br>
-                        Unfortunately, the queried workbooks are internal and cannot be shared publicly.<br>
-                        I did create a template of this tool that is available for download <a href="./Content/Asset Checker/Asset Check Template.xlsx" download="Asset_Check_Template">here</a>.<br>
-                    </p>
-                </section>
+                    <section id="section3">
+                        <!--Asset Checker-->
+                        <h2>Asset Checker</h2>
+                        <p>
+                            The existing process our team used to check the return status of an asset was extensive and time-consuming.<br>
+                            Technicians would query two separate workbooks and search our vendor's website manually for each serial number.<br>
+                            This process could take quite some time depending on how many assets were being queried.<br>
+                            <br>
+                            I created an online spreadsheet that pulls in data from both workbooks and checks this data against the provided values.<br>
+                            A technician could theoretically paste in hundreds of serial numbers and be provided with an instant confirmation of return.<br>
+                            Additionally, there is a concatenated hyperlink generated for each serial number of easy searching of our vendor's database.<br>
+                            <br>
+                            <figure>
+                                <img height="400" width="800" src="./Content/Asset Checker/Asset Check.png" alt="asset checker">
+                                <figcaption>A screenshot of the tool in use.</figcaption>
+                            </figure>
+                            <br>
+                            Unfortunately, the queried workbooks are internal and cannot be shared publicly.<br>
+                            I did create a template of this tool that is available for download <a href="./Content/Asset Checker/Asset Check Template.xlsx" download="Asset_Check_Template">here</a>.<br>
+                        </p>
+                    </section>
 
-                <section id="section4">
+                    <section id="section4">
 
-                    <h2>Knowledge Base</h2>
+                        <h2>Knowledge Base</h2>
 
-                    <p>
-                        When I started, my department did not have any formal online libraries for new employees or troubleshooting.<br>
-                        I created a online OneNote knowledge base that is accessible and editable by all team members.<br>
-                        I have worked with my peers to add their personal notes to the knowledge base.<br>
-                        <br>
-                        The document includes uncommon troubleshooting solutions (cases) and documentation for each role within our department.<br>
-                        Unfortunately, there are techniques and operations specific to the corporate environment within my documentation, so I can only provide only a screenshot.<br>
-                        <figure>
-                            <img height="500" width="800" src="./Content/Knowledge Base/Knowledge Base.png" alt="Knowledge Base">
-                            <figcaption>A screenshot of the Knowledge Base depicting a guide I created to assist my coworkers with an intricate process.</figcaption>
-                        </figure>
-                    </p>
+                        <p>
+                            When I started, my department did not have any formal online libraries for new employees or troubleshooting.<br>
+                            I created a online OneNote knowledge base that is accessible and editable by all team members.<br>
+                            I have worked with my peers to add their personal notes to the knowledge base.<br>
+                            <br>
+                            The document includes uncommon troubleshooting solutions (cases) and documentation for each role within our department.<br>
+                            Unfortunately, there are techniques and operations specific to the corporate environment within my documentation, so I can only provide only a screenshot.<br>
+                            <figure>
+                                <img height="500" width="800" src="./Content/Knowledge Base/Knowledge Base.png" alt="Knowledge Base">
+                                <figcaption>A screenshot of the Knowledge Base depicting a guide I created to assist my coworkers with an intricate process.</figcaption>
+                            </figure>
+                        </p>
 
-                </section>
+                    </section>
 
-                <section id="section5">
-                    <!--Door Data-->
-                    <h2>Door Data</h2>
-                    <p>
-                        My team lead was discussing the possibility of letting some technicians work from home, but they were unsure about which days were busiest for corporate pickups and drop offs.<br>
-                        I took it upon myself to process the data that was available in the form of drop off and pickup confirmation emails.<br>
-                        To do so, I pulled the data from Outlook, compiled, and formatted it, then created statistics based on each day of the week.<br>
-                        <figure>
-                            <img height="400" width="800" src="./Content/Door Data/Door Data.png" alt="door data">
-                            <figcaption>A screenshot of the Door Data workbook detailing the busiest days of the week.</figcaption>
-                        </figure>
+                    <section id="section5">
+                        <!--Door Data-->
+                        <h2>Door Data</h2>
+                        <p>
+                            My team lead was discussing the possibility of letting some technicians work from home, but they were unsure about which days were busiest for corporate pickups and drop offs.<br>
+                            I took it upon myself to process the data that was available in the form of drop off and pickup confirmation emails.<br>
+                            To do so, I pulled the data from Outlook, compiled, and formatted it, then created statistics based on each day of the week.<br>
+                            <figure>
+                                <img height="400" width="800" src="./Content/Door Data/Door Data.png" alt="door data">
+                                <figcaption>A screenshot of the Door Data workbook detailing the busiest days of the week.</figcaption>
+                            </figure>
 
-                        This workbook is available for download <a href="./Content/Door Data/Door Data.xlsx" download="Door_Data">here</a>.<br>
-                        While the content is likely irrelevant outside of the office, you may find the formulas for managing dates and comparing lists useful.
-                    </p>
-                </section>
+                            This workbook is available for download <a href="./Content/Door Data/Door Data.xlsx" download="Door_Data">here</a>.<br>
+                            While the content is likely irrelevant outside of the office, you may find the formulas for managing dates and comparing lists useful.
+                        </p>
+                    </section>
 
-                <section id="section6">
-                    <!--Mail Merge-->
-                    <h2>Mail Merge</h2>
-                    <p>
-                        Mail merge is a useful Microsoft Office feature that allows you to pull data from Excel into Word to send emails through Outlook.<br>
-                        <br>
-                        The team I am on is responsible for sending on average 90 emails a week outside of support or requests. The data in these emails is available within an Excel workbook,<br>
-                        so to save time, I automated the process using Mail Merge.<br>
-                        After the success I had using mail merge, I decided to write a guide and aid my coworkers to automate their emails.<br>
-                        If you would like to download the guide, it is available <a href = './Content/Mail Merge/Mail Merge Instructions.docx' download="Mail Merge instructions">here</a><br>
-                        If you would like to download the sample Excel sheet, it is available <a href = './Content/Mail Merge/Sample offline refresh sheet.xlsx' download="Mail Merge sample sheet">here</a><br>
-                    </p>
-                </section>
+                    <section id="section6">
+                        <!--Mail Merge-->
+                        <h2>Mail Merge</h2>
+                        <p>
+                            Mail merge is a useful Microsoft Office feature that allows you to pull data from Excel into Word to send emails through Outlook.<br>
+                            <br>
+                            The team I am on is responsible for sending on average 90 emails a week outside of support or requests. The data in these emails is available within an Excel workbook,<br>
+                            so to save time, I automated the process using Mail Merge.<br>
+                            After the success I had using mail merge, I decided to write a guide and aid my coworkers to automate their emails.<br>
+                            If you would like to download the guide, it is available <a href = './Content/Mail Merge/Mail Merge Instructions.docx' download="Mail Merge instructions">here</a><br>
+                            If you would like to download the sample Excel sheet, it is available <a href = './Content/Mail Merge/Sample offline refresh sheet.xlsx' download="Mail Merge sample sheet">here</a><br>
+                        </p>
+                    </section>
 
-                <section id="section7">
-                    <!--Sales-->
-                    <h2>Sales</h2>
-                    <p>
-                        After three months in my technician role, I was trusted with the responsibility of supporting all salespeople within the company. A majority of this responsibility entails<br>
-                        providing and receiving sales assets. Over the next month, I revolutionized and standardized this process.<br>
-                        <br>
-                        Process:<br>
-                        --------<br>
-                        When a request for a new user is received, I provision a machine by creating an 'Outgoing card' to ensure all necessary steps are followed.<br>
-                        When a machine is received be it from a retiring salesperson or closure, the asset is labeled with an 'Incoming Card' to ensure all necessary steps are followed.<br>
-                        All sales assets are documented on an inventory sheet I manage.<br>
-                        <figure>
-                            <img height="400" width="800" src="./Content/Sales/Sales Inventory.png" alt="sales inventory">
-                            <figcaption>Above is a redacted screenshot of the sales inventory sheet from February 2024.</figcaption>
-                        </figure>
-                        <br>
-                        If you would download either process management cards, please select the links below:<br>
-                        <a href = './Content/Sales/Sales Incoming cards.docx' download="sales_incoming_cards">Sales incoming cards</a> |
-                        <a href = './Content/Sales/Sales Outgoing cards.docx' download="sales_outgoing_cards">Sales outgoing cards</a>
-                        <br>
-                    </p>
-                </section>
+                    <section id="section7">
+                        <!--Sales-->
+                        <h2>Sales</h2>
+                        <p>
+                            After three months in my technician role, I was trusted with the responsibility of supporting all salespeople within the company. A majority of this responsibility entails<br>
+                            providing and receiving sales assets. Over the next month, I revolutionized and standardized this process.<br>
+                            <br>
+                            Process:<br>
+                            --------<br>
+                            When a request for a new user is received, I provision a machine by creating an 'Outgoing card' to ensure all necessary steps are followed.<br>
+                            When a machine is received be it from a retiring salesperson or closure, the asset is labeled with an 'Incoming Card' to ensure all necessary steps are followed.<br>
+                            All sales assets are documented on an inventory sheet I manage.<br>
+                            <figure>
+                                <img height="400" width="800" src="./Content/Sales/Sales Inventory.png" alt="sales inventory">
+                                <figcaption>Above is a redacted screenshot of the sales inventory sheet from February 2024.</figcaption>
+                            </figure>
+                            <br>
+                            If you would download either process management cards, please select the links below:<br>
+                            <a href = './Content/Sales/Sales Incoming cards.docx' download="sales_incoming_cards">Sales incoming cards</a> |
+                            <a href = './Content/Sales/Sales Outgoing cards.docx' download="sales_outgoing_cards">Sales outgoing cards</a>
+                            <br>
+                        </p>
+                    </section>
 
-                <section id="section8">
-                    <!--PowerShell-->
-                    <h2>PowerShell</h2>
-                    <p>
-                        I utilize PowerShell to help automate some processes that benefit both my team and I.<br>
-                        All downloadable scripts are saved as text files. Please see a few examples below:<br>
-                        <br>
-                        Last login - Used to determine the last time that a user authenticated to the domain.<br>
-                        Feel free to download this script <a href = './Content/PowerShell/last_LogIn_Check.txt' download="Last_login_check">here</a><br>
-                        <br>
-                        Email validator - Takes in a list of user emails and isolates those that are not associated with an object in AD.<br>
-                        Feel free to download this script <a href = './Content/PowerShell/Email_Validator.txt' download="Email_validator">here</a><br>
-                        <br>
-                        Both of these tools were shared with me. Thanks to my mentor, Jake!<br>
-                    </p>
-                </section>
+                    <section id="section8">
+                        <!--PowerShell-->
+                        <h2>PowerShell</h2>
+                        <p>
+                            I utilize PowerShell to help automate some processes that benefit both my team and I.<br>
+                            All downloadable scripts are saved as text files. Please see a few examples below:<br>
+                            <br>
+                            <b>Last login</b> - Used to determine the last time that a user authenticated to the domain.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/last_LogIn_Check.txt' download="Last_login_check">here</a><br>
+                            <br>
+                            <b>Email validator</b> - Takes in a list of user emails and isolates those that are not associated with an object in AD.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Email_Validator.txt' download="Email_validator">here</a><br>
+                            <br>
+                            Both of these scripts above were shared with me. Thanks to my mentor, Jake!<br>
+                            <hr style="border-top: 1px solid black;">
+                            <h4>My Scripts:</h4>
+                            <b>Check for process</b> - Used to check if a specified process is running on a computer. This can be used on the local device or on any remote domain computer.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Check for process.txt' download="Check for process">here</a>.<br>
+                            <br>
+                            <b>Check for service</b> - Used to check if a specified service is running on a computer. This can be used on the local device or on any remote domain computer.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Check for Service.txt' download="Check for service">here</a>.<br>
+                            <br>
+                            <b>Pull Env data from machine to txt</b> - Used to pull enviornment data from a local or remote specified machine. Data is written to a text file.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Pull Env data from machine to txt.txt' download="Pull Env data from machine to txt">here</a>.<br>
+                            <br>
+                            <b>Pull Emails based on name</b> - Takes in a list of space seperated first and last names and writes a list of UserPrincipalNames (email address') if the name is recognized in AD.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Pull_Emails_based_on_name.txt' download="Pull Emails based on name">here</a>.<br>
+                            <br>
+                            <b>Pull User Data Exp to CSV</b> - Takes in a list of user emails and writes requested information to a csv file.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Pull_User_Data_Exp_to_CSV.txt' download="Pull User Data Exp to CSV">here</a>.<br>
+                            <br>
+                            <b>Pull Single User Data</b> - Used to pull account information from a specific user.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Pull_Single_User_Data.txt' download="Pull Single User Data">here</a>.<br>
+                            <br>
+                            <b>Search All Users in CC</b> - Pulls all users within a specified cost center. This script can be quickly adapted to search for all users within any specified property such as a department or location.<br>
+                            Feel free to download this script <a href = './Content/PowerShell' download="">here</a>.<br>
+                            <br>
+                            <b>Search by CC</b> - Pulls the cost center from a list of user emails. his script can be quickly adapted to search for any specified property as long as you have the user's email address.<br>
+                            Feel free to download this script <a href = './Content/PowerShell' download="">here</a>.<br>
+                            <br>
+                            <b>Search by single CC</b> - Pulls the cost center from a singular user email.<br>
+                            Feel free to download this script <a href = './Content/PowerShell' download="">here</a>.<br>
+                            <br>
+                            <br>
+                            The scripts listed below utilize the Invoke-WebRequest and Invoke-RestMethod cmdlets to allow webscraping and REST API requests.<br>
+                            These requests cannot be tested as the internal website that I wrote these scripts for requires authentication.<br>
+                            <br>
+                            <b>Webscrape RM PS</b> - Connects to a specified webpage and pulls the innertext of a specified HTML element.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Webscrape-RM-PS.txt' download="Webscrape RM PS">here</a>.<br>
+                            <br>
+                            <b>Webscrape RM API</b> - Makes two API calls to pull data directly from the SQL database that powers our internal website.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Webscrape-RM-API.txt' download="Webscrape RM API">here</a>.<br>
+                            <br>
+                            <b>Webscrape Transfer Records</b> Makes an API call to pull asset transfer history from our SQL database.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Webscrape-TransferRecords.txt' download="Webscrape Transfer Records">here</a>.<br>
+                            <br>
+                            <b>Webscrape Post TSO</b> This script makes a REST API POST request to push data to our internal SQL database.<br>
+                            This script still does not work correctly, but it serves as a great example for building POST requests bodies, making REST API POST requests, and pulling request verification tokens (XSRF tokens).<br>
+                            If you feel comfortable making such requests, please feel free to contact me. I would love to work with you to get a similar request to work.<br>
+                            Feel free to download this script <a href = './Content/PowerShell/Webscrape-Post-TSO.txt' download="Webscrape Post TSO">here</a>.<br>
+                        </p>
+                    </section>
 
-                <section id="section9">
-                    <!--Coordinator PO Search-->
-                    <h2>Coordinator PO Search</h2>
-                    <p>
-                        A little background is needed to understand the purpose of the attached tool.<br>
-                        Every Friday, the coordinator team in my department designates one person to manually search ~250 purchase order numbers in Outlook.<br>
-                        This practice has been in place since the beginning of the department.<br>
-                        <br>
-                        The attached tool saves the coordinator team roughly 2 hours of manual labor each week.<br>
-                        The linked Excel sheet concatenates up to 50 purchase order numbers, adding an OR operand between each.<br>
-                        From here, Outlook can be queried 5 times, while flagging notable emails. This takes minutes, not hours.<br>
-                        <br>
-                        Feel free to download this workbook <a href = './Content/Coordinator PO Search/Coordinator PO Search.xlsx' download="Coordinator_PO_Search">here</a>
-                        <br>
-                    </p>
-                </section>
+                    <section id="section9">
+                        <!--Coordinator PO Search-->
+                        <h2>Coordinator PO Search</h2>
+                        <p>
+                            A little background is needed to understand the purpose of the attached tool.<br>
+                            Every Friday, the coordinator team in my department designates one person to manually search ~250 purchase order numbers in Outlook.<br>
+                            This practice has been in place since the beginning of the department.<br>
+                            <br>
+                            The attached tool saves the coordinator team roughly 2 hours of manual labor each week.<br>
+                            The linked Excel sheet concatenates up to 50 purchase order numbers, adding an OR operand between each.<br>
+                            From here, Outlook can be queried 5 times, while flagging notable emails. This takes minutes, not hours.<br>
+                            <br>
+                            Feel free to download this workbook <a href = './Content/Coordinator PO Search/Coordinator PO Search.xlsx' download="Coordinator_PO_Search">here</a>
+                            <br>
+                        </p>
+                    </section>
 
-                <section id="section10">
-                    <!--Documentation-->
-                    <h2>Documentation</h2>
-                    <p>
-                        I have created some documentation for a few issues that users experience most often.<br>
-                        Please feel free to browse some of this documentation below:<br>
-                        <br>
-                        Targus Docking Stations that will soon be introduced to our users.<br>
-                        Feel free to download this document <a href = './Content/Documentation/Targus dock.pdf' download="Targus_documentation">here</a>
-                        <br>
-                        <br>
-                        OneDrive setup guide for the pre and post-refresh process.<br>
-                        Feel free to download this document <a href = './Content/Documentation/OneDrive Setup Guide.docx' download="OneDrive_setup_guide">here</a>
-                        <br>
-                        <br>
-                        Chrome Bookmark guide detailing how to export and import saved bookmarks.<br>
-                        Feel free to download this document <a href = './Content/Documentation/Chrome Bookmarks Guide.docx' download="">here</a>
-                        <br>
-                        <br>
-                        Zscaler setup guide. Zscaler is an endpoint-based firewall that is notorius for causing issues with new Windows installations within my organization.<br>
-                        This guide is a quick and easy preventative measure in-case Zscaler prevents the automatic installation of other software.<br>
-                        Feel free to download this document <a href = './Content/Documentation/Zscaler Setup Guide.docx' download="">here</a>
-                        <br>
-                    </p>
-                </section>
+                    <section id="section10">
+                        <!--Documentation-->
+                        <h2>Documentation</h2>
+                        <p>
+                            I have created some documentation for a few issues that users experience most often.<br>
+                            Please feel free to browse some of this documentation below:<br>
+                            <br>
+                            Targus Docking Stations that will soon be introduced to our users.<br>
+                            Feel free to download this document <a href = './Content/Documentation/Targus dock.pdf' download="Targus_documentation">here</a>
+                            <br>
+                            <br>
+                            OneDrive setup guide for the pre and post-refresh process.<br>
+                            Feel free to download this document <a href = './Content/Documentation/OneDrive Setup Guide.docx' download="OneDrive_setup_guide">here</a>
+                            <br>
+                            <br>
+                            Chrome Bookmark guide detailing how to export and import saved bookmarks.<br>
+                            Feel free to download this document <a href = './Content/Documentation/Chrome Bookmarks Guide.docx' download="">here</a>
+                            <br>
+                            <br>
+                            Zscaler setup guide. Zscaler is an endpoint-based firewall that is notorius for causing issues with new Windows installations within my organization.<br>
+                            This guide is a quick and easy preventative measure in-case Zscaler prevents the automatic installation of other software.<br>
+                            Feel free to download this document <a href = './Content/Documentation/Zscaler Setup Guide.docx' download="">here</a>
+                            <br>
+                        </p>
+                    </section>
 
+                    <section id="section11">
+                        <!--HTT Website-->
+                        <h2>HTT Website</h2>
+                        <p>
+                            Every member of our team either used our outdated official refresh website or created their own decentralized guides for each aspect of the refresh process.<br>
+                            The department was in desperate need of a centralized and updated website that was easy to navigate.
+                            <br><br>
+                            With help from a coworker, I redesigned our department’s outdated Auto Pilot transition guide websites.<br>
+                            I recorded 6 guide videos and uploaded them to the department’s YouTube channel after editing them.<br>
+                            I then created follow-along written guides and process overviews for the websites as well. Please see links to both websites below:<br>
+                            o   <a href="https://htt.compass-usa.com/pre-replacement/">Pre-replacement refresh guide</a><br>
+                            o	<a href="https://htt.compass-usa.com/post-replacement/">Post-replacement refresh guide</a>
+                            <br><br>
+                            These websites are now the standard for our department.<br>
+                            They have led to a significant decrease in support requests by providing better, more accessible information to our users.
+                            <br>
+                        </p>
+                    </section>
 
+                    <section id="section12">
+                        <!--IntuneLoginData-->
+                        <h2>Intune Login Data</h2>
+                        <p>
+                            Only 3 people have access to Microsoft Intune login data for the entire company.<br>
+                            One of them being my coworker who had the foresight to export each month’s data before it became unavailable.<br>
+                            For each quarter, there are around 100,000 records.<br>
+                            Per their request, I added a method to query the latest login for up to 500 emails or serial numbers.<br>
+                            In addition to this, I created a functionality that will produce every login for the documented quarter based on serial number or email address.<br>
+                            This is the only tool of its kind that the entire company has access to at this point and I am proud to say that I created it.
+                            <br><br>
+                            I have removed any identifying information from the spreadsheet. It is availible for download below.<br>
+                            Feel free to download this document <a href = './Content/IntuneLoginData/LastLogin-Template.xlsx' download="">here</a>
+                            <br>
+                        </p>
+                    </section>
+
+                    <section id="section13">
+                        <!--Missing assets-->
+                        <h2>Missing assets</h2>
+                        <p>
+                            Our department was assigned a project to locate 145 missing assets.<br>
+                            My team members were manually filling out email templates and immediately working with any users that responded.<br>
+                            There were three main issues with this.<br>
+                            <ul>
+                                <li>Most of the 145 records were missing a contact email.</li>
+                                <li>The process was very time consuming.</li>
+                                <li>It could affect workflow significantly if several people responded to their contact emails simultaneously.</li>
+                            </ul>
+                            To alleviate all three issues, I did the following:<br>
+                            <ul>
+                                <li>I used the last login data tool I had created earlier that week to provide data for most records.</li>
+                                <li>I automated sending emails to all available contact emails that were provided or last to log in to the machine.These emails were sent from our department’s shared email address after I RDP’d into our EOL machine.</li>
+                                <li>I set up a folder within our shared inbox and an Outlook rule to route all responses to it.</li>
+                            </ul>
+                            From here, all appropriate emails had been contacted and our team could reach out to anyone that responds via our shared inbox.<br>
+                            This approach applied a "If you build it, they will come" mentality by automating all of the legwork.<br>
+                            <br>
+                            Please see the video below for a demonstration of the last 19 emails being sent from the survey machine I remoted into.<br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LCCvLaSiMWU?si=bYlP1JBFSDsdn9dn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <br>
+                            Please excuse the discomforting laugh. I was elated to see that the process was successful.<br>
+                            <br>
+                            The image below shows the 130 replies that our team has recieved from the inital automated emails.<br>
+                            <img height="500" width="800" src="./Content/Missing assets/inbox replies.png" alt="Missing assets">
+                            <br>
+                        </p>
+                    </section>
+
+                    <section id="section14">
+                        <!--Home lab updates-->
+                        <h2>Home lab updates</h2>
+                        <p>
+                            My homelab at its core is a Windows Server 2019 virtual machine hosting a domain enviornment for other virtual machines and tools.<br>
+                            I use Virtual box and chose to follow Josh Madakor's YouTube tutorial as I have enjoyed his content in the past.<br>
+                            This home lab is the best educational tool that I have had the pleasure of working with.<br>
+                            I have had the opportunity to use several tools and devices that I would otherwise have had no access to.<br>
+                            Please see below the network diagram created by Josh Madakor:<br>
+                            <img height="500" width="800" src="./Content/Home Lab/Network Diagram.png" alt="Network Diagram">
+                            <br><br>
+                            <b>2/6/24</b><br>
+                            I created an OU in AD for users and added an additional user, Kay.<br>
+                            I then created a security group and added both users to this group.<br>
+                            I created a shared drive and a virtual machine to act as a user's computer.<br>
+                            <br>
+                            <b>3/11/24</b><br>
+                            I finally got a Win11 VM to boot. To do so, I did the following:<br>
+                            Under settings > System > TPM: 2.0 & enable EFI. My VM was not receiving an internet connection.<br>
+                            I troubleshot the issue and corrected it on the DC.<br>
+                            <br>
+                            <b>3/12/24</b><br>
+                            I ensured that the sharedrive was accessible on both machines.<br>
+                            <br>
+                            <b>3/18/24</b><br>
+                            <br>
+                            Set permissions based on security groups to allow only read/execute access to sharedrive folders for all users other than the Administrators.<br>
+                            <br>
+                            <b>3/26/24</b><br>
+                            After booting my DC back up, I could not connect to the interanet.<br>
+                            I unauthorized and reauthorized the DHCP server and refreshed it.<br>
+                            This seemed to correct the issue.<br>
+                            Apparently, the Active Directory vulnerability scanner I want to use, Purple Knight requires a business email to request access.<br>
+                            I contacted their support email and am hoping to hear back soon.<br>
+                            I also downloaded pfSense to set up a virtualized firewall within my network. I plan to implement it soon.<br>
+                            <br>
+                            <b>3/27/24</b><br>
+                            <br>
+                            I set up a scheduled task to run remotely on a computer in my domain.<br>
+                            To view the video, steps, and process, please see my <a onclick="section15()">GPO Script execution article</a>.<br>
+                            I was provided an installer for Purple Knight! I ran the vulnerability scanner on my network and received a C- score of 78%.<br>
+                            Pretty good considering I have not done anything to secure my domain yet.<br>
+                            I plan to explore and correct any security issues made evident within the report.<br>
+                            To see the changes I have made to my domain to correct them, please see my <a onclick="section17()">Securing the Domain article</a>.<br>
+                            <br>
+                            <b>4/2/24</b><br>
+                            I created a virtual machine running pfSense.<br>
+                            I attempted to set the machine up to route traffic over my virtual network, but I could not seem to get it to work.<br>
+                            I created a new virtual machine on my domain using a well-known dragon-themed OS.<br>
+                            I can't wait to experiment with the tools in this distribution!<br>
+                            <br>
+                            <b>4/3/24</b><br>
+                            <br>
+                            My mentor's advice was sound.<br>
+                            I needed to add my domain administrator account to the 'Enterprise Administrator group to be able to change the LDAP signing policy for the DC and domain users.<br>
+                            I corrected this issue taking the final step (for now) to harden my DC.
+                            <br><br>
+                            There are more updates to come!<br>
+                            Please check back in periodically!                            
+                        </p>
+                    </section>
+
+                    <section id="section15">
+                        <!--GPO Script Execution-->
+                        <h2>GPO Script Execution</h2>
+                        <p>
+                            My mentor has taught me about the importance of being able to execute scripts on remote machines accross a domain.<br>
+                            Patching vulnerabilities in vulnerable remote systems makes up a majority of their day, so it is of the upmost importance that I am able to do the same within my home lab.<br>
+                            <br>
+                            My mentor schedules scripts to execute on dozens or hundreds of machines at a time, but for the sake of simplicity and resources, I will be doing so on one virtual endpoint.<br>
+                            If you are interested in how, please read the steps listed below:<br>
+                            <ul>
+                                <li>Select a non-production server that you can connect to using RDP.</li>
+                                <li>Create a PowerShell script to automate the work. Test this script on the connected server.</li>
+                                <li>Create a share drive location and ensure it is shared with each device or user you will be working with.</li>
+                                <li>Add the PowerShell script and any support files to the network location.</li>
+                                <li>Create a Group Policy object and remove the Authenticated Users filter option immediately!</li>
+                                <li style="margin-left: 20px;">If this setting is not disabled now, it will affect all devices/users in the linked OU!</li>
+                                <li>Edit Group Policy object and schedule a task.</li>
+                                <li>Link the Group Policy object to the OU that contains all servers. (likely Resources > Servers).</li>
+                                <li style="margin-left: 20px;">This will ensure the policy is visible to keep things neat.</li>
+                                <li>Create a new security group in Active Directory.</li>
+                                <li>Within the Group Policy object we created for this task, we will add the created security group to Security Filtering.</li>
+                                <li>Add to the security group one non-production server to test that the Group Policy Object with the scheduled task to run the PowerShell script from a drive location executes correctly.</li>
+                                <li>If successful, add servers from the provided list to the security group piecemeal if they are important or all at once if not.</li>
+                            </ul><br>
+                            Please watch the video below of me completing these steps to execute a PowerShell script I wrote on a virtual client machine on my domain.<br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/umWkABfqses?si=XBXSvNljYcIioGbN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+                        </p>
+                    </section>
+
+                    <section id="section16">
+                        <!--Access Control-->
+                        <h2>Access Control</h2>
+                        <p>
+                            Access control is a crucial aspect of every organization.<br>
+                            I have not had the pleasure of being in a position that allows me to act as a data owner or set user roles and permissions until now!<br>
+                            I chose to implement Role Based Access Control on my domain resources as this model is simple, scalable, and requires little overhead.<br>
+                            For this example, I have a network drive set up that is accessible to all domain users.<br>
+                            Within this location, I have two subfolders.<br>
+                            The first folder, titled 'Scripts' contains PowerShell scripts that are used to remotely execute on any domain computer via a GPO task.<br>
+                            To view the video, steps, and process, please see my <a onclick="section15()">GPO Script execution article</a>.<br>
+                            The second folder, titled 'Admin' contains administrative resources that should not be accessible unless a user's role dictates such.<br>
+                            The screenshots below are a view of the same network drive from the perspective of an administrative account and a normal user account.<br>
+                            <img height="300" width="480" src="./Content/Home Lab/Admin View.png" alt="Admin View">
+                            <img height="300" width="480" src="./Content/Home Lab/User View.png" alt="User View"><br>
+                            Notice that the administrative folder is inaccessible in the normal user account screenshot.<br>
+                            I plan on implementing an identity and access solution once I can find a free and open-sourced resource.<br>
+                            It seems as though every IDAM soultion out there requires enterprise level licensing.<br>
+                            If you happen to have any suggestions for potential services, please feel free to reach out.
+                        </p>
+                    </section>
+
+                    <section id="section17">
+                        <!--Securing the Domain-->
+                        <h2>Securing the Domain</h2>
+                        <p>
+                            During my studies for CompTIA's Security+, I read quite a bit about vulnerability scanners.<br>
+                            My interest was piqued by these tools and I was waiting for an opportunity to test one out.<br>
+                            Fortunately for me, my home lab hosts a fully functional Windows domain.<br>
+                            To conduct the audit, I decided to use Purple Knight, a free and highly efficatious domain vulnerability scanner.<br>
+                            The results of my "out of the box" domain controller were less than ideal.<br>
+                            <br>
+                            Please feel free to download the original vulnerability scan report: <a href = './Content/Home Lab/Security_Assessment_Report_1.pdf' download="Security_Assessment_Report_1">here</a><br>
+                            <br>
+                            From here, I have taken the steps listed below to harden my domain:<br><br>
+
+                            <b>Built-in domain Administrator account used within the last two weeks.</b><br>
+                            I began using the domain administrator user account that I created instead of the default domain controller account.<br>
+                            <br>
+                            <b>Changes to Pre-Windows 2000 Compatible Access Group membership</b><br>
+                            According to the security blog I found, this vulnerability would allow anyone to view the domain by possibly discovering vulnerabilities or accounts for lateral movement.<br>
+                            To correct this issue, I removed "Authenticated Users" from this Group Policy object.<br>
+                            This security group is deprecated and useless on my network anyway.<br>
+                            <br>
+                            <b>LDAP signing is not required on Domain Controllers</b><br>         
+                            This potential issue makes unsigned traffic between the domain controller and active directory computers vulnerable to man-in-the-middle attacks.<br>
+                            Simply requiring LDAP traffic to be signed via SASL will prevent the tampering of in-transit LDAP data.<br>
+                            Server-side signing: Local Security Policy > Local Policies > Security Options > Domain controller: LDAP server signing requirements "Box is grayed out?"<br>
+                            I needed to add my domain administrator account to the 'Enterprise Administrator group to be able to change the LDAP signing policy for the DC and domain users.<br>
+                            <br>
+                            <b>RC4 or DES encryption types are supported by Domain Controllers</b><br>
+                            Both RC4 and DES are insecure encryption algorithms that should not be allowed within a secure domain.<br>
+                            See CVE-2013-2566 and CVE-2015-2808.<br>
+                            To correct this issue, I accessed Local Group Policy Editor > Under Computer Configuration: Windows Settings > Security Settings > Local Policies > Security Options > Network Security: Configure encryption types allowed for Kerberos. I then selected only AES128_HMAC_SHA1 and AES256_HMAC_SHA1 as they are secure encryption algorithms.<br>
+                            <br>
+                            <b>The practice of lease functionality was not implemented</b><br>
+                            I disabled the unused print spooler.<br>
+                            <br>
+                            <b>Insecure Account Password Settings</b><br>
+                            I increased the minimum password length for all privileged users to meet ANSSI standards.<br>
+                            (At least 8 characters long and updated no later than every 3 years).<br>
+                            My passwords met this requirement, but the policy was set to meet or exceed the expiration minimum.<br>
+                            <br>
+                            My most recent report reflects these changes.<br>
+                            Please feel free to download the updated vulnerability scan report: <a href = './Content/Home Lab/Security_Assessment_Report_2.pdf' download="Security_Assessment_Report_2">here</a><br>
+                            <br>
+                            There are always additional steps that can be taken to continue securing my domain controller and Active Directory enviornment.<br>
+                            Please check back in to note the additional progress being made within my home lab enviornment.<br>
+                        </p>
+                    </section>
+
+                </div>
             </Main>
     </body>
 
@@ -269,6 +568,7 @@
 
         <!--JavaScript-->
         <script src="./Showcase.js"></script>
+        <script> </script>
 
         <!--CSS-->
         <style src></style>

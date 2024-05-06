@@ -1,0 +1,24 @@
+﻿#If one were to add this file and it's text file to a share drive, they could schedule a task to run this on all
+# computers within a security group to document all of their operating systems and associated serial numbers
+
+# Instantiates variables for OS and SN
+$OS = $SN = ''
+
+# Sets the Enviornment Variable value for each variable on line 2
+$OS = (Get-WmiObject Win32_OperatingSystem).Name
+$SN = (Get-ChildItem Env:COMPUTERNAME).Value
+
+# Splits the OS variable's value after the first pipe
+$OS = $OS = ($OS.Split('|'))[0]
+
+# Creates an array variable for the OS and SN variables
+$Data = $SN, $OS
+
+# Adds a comma between array items in $Data
+$Data = $Data -join ","
+
+# Adds Data array out to a created text file.
+Add-Content -Path 'filepath' -Value $Data
+
+# Prints the $Data array to console.
+Write-Host $Data
