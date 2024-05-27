@@ -72,7 +72,7 @@
 
 
             <Main>
-                <div id="content" style="margin-top: 100px;">
+                <div id="content" style= "margin-top: 100px;">
                     <section id="section1">
                         <!--Home-->
                         <h2>Showcase Home</h2>
@@ -454,7 +454,7 @@
                             I corrected this issue taking the final step (for now) to harden my DC.
                             <br><br>
                             There are more updates to come!<br>
-                            Please check back in periodically!                            
+                            Please check back in periodically!
                         </p>
                     </section>
 
@@ -531,7 +531,7 @@
                             To correct this issue, I removed "Authenticated Users" from this Group Policy object.<br>
                             This security group is deprecated and useless on my network anyway.<br>
                             <br>
-                            <b>LDAP signing is not required on Domain Controllers</b><br>         
+                            <b>LDAP signing is not required on Domain Controllers</b><br>
                             This potential issue makes unsigned traffic between the domain controller and active directory computers vulnerable to man-in-the-middle attacks.<br>
                             Simply requiring LDAP traffic to be signed via SASL will prevent the tampering of in-transit LDAP data.<br>
                             Server-side signing: Local Security Policy > Local Policies > Security Options > Domain controller: LDAP server signing requirements "Box is grayed out?"<br>
