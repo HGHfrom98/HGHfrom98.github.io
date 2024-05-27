@@ -121,3 +121,7 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+i.code {
+  text-indent: 290px;
+}

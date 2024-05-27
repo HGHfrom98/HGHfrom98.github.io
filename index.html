@@ -60,6 +60,11 @@
                             <a onclick="section15()">GPO Script Execution</a>
                             <a onclick="section16()">Access Control</a>
                             <a onclick="section17()">Securing the Domain</a>
+                            <a onclick="section18()">LAPS & Software Deployment</a>
+                            <a onclick="section19()">Splunk</a>
+                            <a onclick="section20()">Firewall</a>
+                            <a onclick="section21()">NIDS</a>
+                            <a onclick="section22()">GMSA</a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +72,7 @@
 
 
             <Main>
-                <div id="content">
+                <div id="content" style="margin-top: 100px;">
                     <section id="section1">
                         <!--Home-->
                         <h2>Showcase Home</h2>
@@ -80,7 +85,7 @@
                                 <figcaption>A picture of me in front of the USS North Carolina in Wilmington, NC.</figcaption>
                             </figure>
                             Hi, my name is Hunter Gayhart.<br>
-                            I am a computer science graduate from the University of North Carolina at Charlotte. I currently hold a position as a tier 2 desktop support technician here in Charlotte. I am Security+ & A+ certified. I have three years of hands-on experience to validate these certifications in the form of several IT projects. A few notable examples include my current role where I am solely responsible for preparing and providing hardware for all salespeople within a fortune 500 company in addition to my desktop support role. In the past, I held a position maintaining hardware for 28 Credit Union locations spanning Eastern NC.
+                            I am a computer science graduate from the University of North Carolina at Charlotte. I currently hold a position as a tier 2 desktop support technician here in Charlotte. I am Security+ & A+ certified. I have three years of hands-on experience to validate these certifications in the form of several IT projects. A few notable examples include my current role where I am solely responsible for preparing and providing hardware for all salespeople within a Fortune 500 company in addition to my desktop support role. In the past, I held a position maintaining hardware for 28 Credit Union locations spanning Eastern NC.
                             <br>
                             My next goal is to hold a position as a system administrator or possibly as a security analyst. My eventual aim is to pursue a career as a security engineer or SOAR engineer.
                             To pursue this goal further, I plan on pursuing the CompTIA CySA+ in the near future and a Masters in Cybersecurity down the road.<br>
@@ -102,15 +107,15 @@
                             <br>
                             <br>
                             AHK-Pull data - Searches provided serial numbers and copies data from an internal system. This tool allows me to update necessary information for the entire team.<br>
-                            I tried to webscrape using curl, but authentication is blocked, so this is the next best solution.<br>
+                            I tried to web scrape using curl, but authentication is blocked, so this is the next best solution.<br>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/kUjICjDDiww?si=1xR8qEm9AKUs-pGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
                             Feel free to download this script <a href = './Content/AutoHotKey/pull_data_full_week.ahk' download="AHK-Pull-Data">here</a>
                             <br>
                             <br>
-                            AHK- Tech sign off - The technician sign off process essentially adds and confirms a new serial number for end-of-lease assets. This process must be completed manually and the<br>
+                            AHK- Tech sign-off - The technician sign-off process essentially adds and confirms a new serial number for end-of-lease assets. This process must be completed manually and the<br>
                             data is provided to our team piecemeal over time. This tool allows me to update, correct, and ensure the accuracy of every refresh record our department has worked on from the end of 2022 to today.
                             At the time of writing (4/1/24), this is 6,620 records over 15 months.
-                            The script recognizes which technican was responsoble for the record and selects the appropriate technican from the dropdown based on this.
+                            The script recognizes which technician was responsible for the record and selects the appropriate technician from the dropdown based on this.
                             All incomplete records have been documented to visit in the future when our vendor provides more information.
                             I plan to continue this project indefinitely for each techinical as data becomes available each week.<br>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/ZoDk30ypq9Y?si=0_H96zo2Fl3PFBkO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
@@ -134,7 +139,7 @@
                             <br>
                             I created an online spreadsheet that pulls in data from both workbooks and checks this data against the provided values.<br>
                             A technician could theoretically paste in hundreds of serial numbers and be provided with an instant confirmation of return.<br>
-                            Additionally, there is a concatenated hyperlink generated for each serial number of easy searching of our vendor's database.<br>
+                            Additionally, there is a concatenated hyperlink generated for each serial number for easy searching of our vendor's database.<br>
                             <br>
                             <figure>
                                 <img height="400" width="800" src="./Content/Asset Checker/Asset Check.png" alt="asset checker">
@@ -142,7 +147,7 @@
                             </figure>
                             <br>
                             Unfortunately, the queried workbooks are internal and cannot be shared publicly.<br>
-                            I did create a template of this tool that is available for download <a href="./Content/Asset Checker/Asset Check Template.xlsx" download="Asset_Check_Template">here</a>.<br>
+                            I created a template of this tool that is available for download <a href="./Content/Asset Checker/Asset Check Template.xlsx" download="Asset_Check_Template">here</a>.<br>
                         </p>
                     </section>
 
@@ -152,11 +157,11 @@
 
                         <p>
                             When I started, my department did not have any formal online libraries for new employees or troubleshooting.<br>
-                            I created a online OneNote knowledge base that is accessible and editable by all team members.<br>
+                            I created an online OneNote knowledge base that is accessible and editable by all team members.<br>
                             I have worked with my peers to add their personal notes to the knowledge base.<br>
                             <br>
                             The document includes uncommon troubleshooting solutions (cases) and documentation for each role within our department.<br>
-                            Unfortunately, there are techniques and operations specific to the corporate environment within my documentation, so I can only provide only a screenshot.<br>
+                            Unfortunately, there are techniques and operations specific to the corporate environment within my documentation, so I can only provide a screenshot.<br>
                             <figure>
                                 <img height="500" width="800" src="./Content/Knowledge Base/Knowledge Base.png" alt="Knowledge Base">
                                 <figcaption>A screenshot of the Knowledge Base depicting a guide I created to assist my coworkers with an intricate process.</figcaption>
@@ -169,9 +174,9 @@
                         <!--Door Data-->
                         <h2>Door Data</h2>
                         <p>
-                            My team lead was discussing the possibility of letting some technicians work from home, but they were unsure about which days were busiest for corporate pickups and drop offs.<br>
-                            I took it upon myself to process the data that was available in the form of drop off and pickup confirmation emails.<br>
-                            To do so, I pulled the data from Outlook, compiled, and formatted it, then created statistics based on each day of the week.<br>
+                            My team lead was discussing the possibility of letting some technicians work from home, but they were unsure about which days were busiest for corporate pickups and drop-offs.<br>
+                            I took it upon myself to process the data that was available in the form of drop-off and pickup confirmation emails.<br>
+                            To do so, I pulled the data from Outlook, compiled, and formatted it, and then created statistics based on each day of the week.<br>
                             <figure>
                                 <img height="400" width="800" src="./Content/Door Data/Door Data.png" alt="door data">
                                 <figcaption>A screenshot of the Door Data workbook detailing the busiest days of the week.</figcaption>
@@ -206,7 +211,7 @@
                             Process:<br>
                             --------<br>
                             When a request for a new user is received, I provision a machine by creating an 'Outgoing card' to ensure all necessary steps are followed.<br>
-                            When a machine is received be it from a retiring salesperson or closure, the asset is labeled with an 'Incoming Card' to ensure all necessary steps are followed.<br>
+                            When a machine is received from a retiring salesperson or unit closure, the asset is labeled with an 'Incoming Card' to ensure all necessary steps are followed.<br>
                             All sales assets are documented on an inventory sheet I manage.<br>
                             <figure>
                                 <img height="400" width="800" src="./Content/Sales/Sales Inventory.png" alt="sales inventory">
@@ -242,10 +247,10 @@
                             <b>Check for service</b> - Used to check if a specified service is running on a computer. This can be used on the local device or on any remote domain computer.<br>
                             Feel free to download this script <a href = './Content/PowerShell/Check for Service.txt' download="Check for service">here</a>.<br>
                             <br>
-                            <b>Pull Env data from machine to txt</b> - Used to pull enviornment data from a local or remote specified machine. Data is written to a text file.<br>
+                            <b>Pull Env data from machine to txt</b> - Used to pull environment data from a local or remote specified machine. Data is written to a text file.<br>
                             Feel free to download this script <a href = './Content/PowerShell/Pull Env data from machine to txt.txt' download="Pull Env data from machine to txt">here</a>.<br>
                             <br>
-                            <b>Pull Emails based on name</b> - Takes in a list of space seperated first and last names and writes a list of UserPrincipalNames (email address') if the name is recognized in AD.<br>
+                            <b>Pull Emails based on name</b> - Takes in a list of space separated first and last names and writes a list of UserPrincipalNames (email address') if the name is recognized in AD.<br>
                             Feel free to download this script <a href = './Content/PowerShell/Pull_Emails_based_on_name.txt' download="Pull Emails based on name">here</a>.<br>
                             <br>
                             <b>Pull User Data Exp to CSV</b> - Takes in a list of user emails and writes requested information to a csv file.<br>
@@ -264,19 +269,19 @@
                             Feel free to download this script <a href = './Content/PowerShell' download="">here</a>.<br>
                             <br>
                             <br>
-                            The scripts listed below utilize the Invoke-WebRequest and Invoke-RestMethod cmdlets to allow webscraping and REST API requests.<br>
+                            The scripts listed below utilize the Invoke-Web Request and Invoke-RestMethod cmdlets to allow web scraping and REST API requests.<br>
                             These requests cannot be tested as the internal website that I wrote these scripts for requires authentication.<br>
                             <br>
-                            <b>Webscrape RM PS</b> - Connects to a specified webpage and pulls the innertext of a specified HTML element.<br>
+                            <b>Web scrape RM PS</b> - Connects to a specified webpage and pulls the innertext of a specified HTML element.<br>
                             Feel free to download this script <a href = './Content/PowerShell/Webscrape-RM-PS.txt' download="Webscrape RM PS">here</a>.<br>
                             <br>
-                            <b>Webscrape RM API</b> - Makes two API calls to pull data directly from the SQL database that powers our internal website.<br>
+                            <b>Web scrape RM API</b> - Makes two API calls to pull data directly from the SQL database that powers our internal website.<br>
                             Feel free to download this script <a href = './Content/PowerShell/Webscrape-RM-API.txt' download="Webscrape RM API">here</a>.<br>
                             <br>
-                            <b>Webscrape Transfer Records</b> Makes an API call to pull asset transfer history from our SQL database.<br>
+                            <b>Web scrape Transfer Records</b> Makes an API call to pull asset transfer history from our SQL database.<br>
                             Feel free to download this script <a href = './Content/PowerShell/Webscrape-TransferRecords.txt' download="Webscrape Transfer Records">here</a>.<br>
                             <br>
-                            <b>Webscrape Post TSO</b> This script makes a REST API POST request to push data to our internal SQL database.<br>
+                            <b>Web scrape Post TSO</b> This script makes a REST API POST request to push data to our internal SQL database.<br>
                             This script still does not work correctly, but it serves as a great example for building POST requests bodies, making REST API POST requests, and pulling request verification tokens (XSRF tokens).<br>
                             If you feel comfortable making such requests, please feel free to contact me. I would love to work with you to get a similar request to work.<br>
                             Feel free to download this script <a href = './Content/PowerShell/Webscrape-Post-TSO.txt' download="Webscrape Post TSO">here</a>.<br>
@@ -307,7 +312,7 @@
                             I have created some documentation for a few issues that users experience most often.<br>
                             Please feel free to browse some of this documentation below:<br>
                             <br>
-                            Targus Docking Stations that will soon be introduced to our users.<br>
+                            Targus Docking Stations will soon be introduced to our users.<br>
                             Feel free to download this document <a href = './Content/Documentation/Targus dock.pdf' download="Targus_documentation">here</a>
                             <br>
                             <br>
@@ -319,7 +324,7 @@
                             Feel free to download this document <a href = './Content/Documentation/Chrome Bookmarks Guide.docx' download="">here</a>
                             <br>
                             <br>
-                            Zscaler setup guide. Zscaler is an endpoint-based firewall that is notorius for causing issues with new Windows installations within my organization.<br>
+                            Zscaler setup guide. Zscaler is an endpoint-based firewall that is notorious for causing issues with new Windows installations within my organization.<br>
                             This guide is a quick and easy preventative measure in-case Zscaler prevents the automatic installation of other software.<br>
                             Feel free to download this document <a href = './Content/Documentation/Zscaler Setup Guide.docx' download="">here</a>
                             <br>
@@ -353,10 +358,10 @@
                             One of them being my coworker who had the foresight to export each month’s data before it became unavailable.<br>
                             For each quarter, there are around 100,000 records.<br>
                             Per their request, I added a method to query the latest login for up to 500 emails or serial numbers.<br>
-                            In addition to this, I created a functionality that will produce every login for the documented quarter based on serial number or email address.<br>
+                            In addition to this, I created a functionality that will produce every login for the documented quarter based on serial numbers or email addresses.<br>
                             This is the only tool of its kind that the entire company has access to at this point and I am proud to say that I created it.
                             <br><br>
-                            I have removed any identifying information from the spreadsheet. It is availible for download below.<br>
+                            I have removed any identifying information from the spreadsheet. It is available for download below.<br>
                             Feel free to download this document <a href = './Content/IntuneLoginData/LastLogin-Template.xlsx' download="">here</a>
                             <br>
                         </p>
@@ -377,10 +382,10 @@
                             To alleviate all three issues, I did the following:<br>
                             <ul>
                                 <li>I used the last login data tool I had created earlier that week to provide data for most records.</li>
-                                <li>I automated sending emails to all available contact emails that were provided or last to log in to the machine.These emails were sent from our department’s shared email address after I RDP’d into our EOL machine.</li>
+                                <li>I automated sending emails to all available contact emails that were provided or last to log in to the machine. These emails were sent from our department’s shared email address after I RDP’d into our EOL machine.</li>
                                 <li>I set up a folder within our shared inbox and an Outlook rule to route all responses to it.</li>
                             </ul>
-                            From here, all appropriate emails had been contacted and our team could reach out to anyone that responds via our shared inbox.<br>
+                            From here, all appropriate emails were contacted and our team could reach out to anyone that responded via our shared inbox.<br>
                             This approach applied a "If you build it, they will come" mentality by automating all of the legwork.<br>
                             <br>
                             Please see the video below for a demonstration of the last 19 emails being sent from the survey machine I remoted into.<br>
@@ -388,7 +393,7 @@
                             <br>
                             Please excuse the discomforting laugh. I was elated to see that the process was successful.<br>
                             <br>
-                            The image below shows the 130 replies that our team has recieved from the inital automated emails.<br>
+                            The image below shows the 130 replies that our team has received from the initial automated emails.<br>
                             <img height="500" width="800" src="./Content/Missing assets/inbox replies.png" alt="Missing assets">
                             <br>
                         </p>
@@ -398,7 +403,7 @@
                         <!--Home lab updates-->
                         <h2>Home lab updates</h2>
                         <p>
-                            My homelab at its core is a Windows Server 2019 virtual machine hosting a domain enviornment for other virtual machines and tools.<br>
+                            My homelab at its core is a Windows Server 2019 virtual machine hosting a domain environment for other virtual machines and tools.<br>
                             I use Virtual box and chose to follow Josh Madakor's YouTube tutorial as I have enjoyed his content in the past.<br>
                             This home lab is the best educational tool that I have had the pleasure of working with.<br>
                             I have had the opportunity to use several tools and devices that I would otherwise have had no access to.<br>
@@ -419,7 +424,6 @@
                             I ensured that the sharedrive was accessible on both machines.<br>
                             <br>
                             <b>3/18/24</b><br>
-                            <br>
                             Set permissions based on security groups to allow only read/execute access to sharedrive folders for all users other than the Administrators.<br>
                             <br>
                             <b>3/26/24</b><br>
@@ -431,7 +435,6 @@
                             I also downloaded pfSense to set up a virtualized firewall within my network. I plan to implement it soon.<br>
                             <br>
                             <b>3/27/24</b><br>
-                            <br>
                             I set up a scheduled task to run remotely on a computer in my domain.<br>
                             To view the video, steps, and process, please see my <a onclick="section15()">GPO Script execution article</a>.<br>
                             I was provided an installer for Purple Knight! I ran the vulnerability scanner on my network and received a C- score of 78%.<br>
@@ -446,7 +449,6 @@
                             I can't wait to experiment with the tools in this distribution!<br>
                             <br>
                             <b>4/3/24</b><br>
-                            <br>
                             My mentor's advice was sound.<br>
                             I needed to add my domain administrator account to the 'Enterprise Administrator group to be able to change the LDAP signing policy for the DC and domain users.<br>
                             I corrected this issue taking the final step (for now) to harden my DC.
@@ -460,7 +462,7 @@
                         <!--GPO Script Execution-->
                         <h2>GPO Script Execution</h2>
                         <p>
-                            My mentor has taught me about the importance of being able to execute scripts on remote machines accross a domain.<br>
+                            My mentor has taught me about the importance of being able to execute scripts on remote machines across a domain.<br>
                             Patching vulnerabilities in vulnerable remote systems makes up a majority of their day, so it is of the upmost importance that I am able to do the same within my home lab.<br>
                             <br>
                             My mentor schedules scripts to execute on dozens or hundreds of machines at a time, but for the sake of simplicity and resources, I will be doing so on one virtual endpoint.<br>
@@ -502,7 +504,7 @@
                             <img height="300" width="480" src="./Content/Home Lab/User View.png" alt="User View"><br>
                             Notice that the administrative folder is inaccessible in the normal user account screenshot.<br>
                             I plan on implementing an identity and access solution once I can find a free and open-sourced resource.<br>
-                            It seems as though every IDAM soultion out there requires enterprise level licensing.<br>
+                            It seems as though every IDAM solution out there requires enterprise-level licensing.<br>
                             If you happen to have any suggestions for potential services, please feel free to reach out.
                         </p>
                     </section>
@@ -512,9 +514,9 @@
                         <h2>Securing the Domain</h2>
                         <p>
                             During my studies for CompTIA's Security+, I read quite a bit about vulnerability scanners.<br>
-                            My interest was piqued by these tools and I was waiting for an opportunity to test one out.<br>
+                            My interest was piqued by these tools, and I was waiting for an opportunity to test one out.<br>
                             Fortunately for me, my home lab hosts a fully functional Windows domain.<br>
-                            To conduct the audit, I decided to use Purple Knight, a free and highly efficatious domain vulnerability scanner.<br>
+                            To conduct the audit, I decided to use Purple Knight, a free and highly efficacious domain vulnerability scanner.<br>
                             The results of my "out of the box" domain controller were less than ideal.<br>
                             <br>
                             Please feel free to download the original vulnerability scan report: <a href = './Content/Home Lab/Security_Assessment_Report_1.pdf' download="Security_Assessment_Report_1">here</a><br>
@@ -551,8 +553,225 @@
                             My most recent report reflects these changes.<br>
                             Please feel free to download the updated vulnerability scan report: <a href = './Content/Home Lab/Security_Assessment_Report_2.pdf' download="Security_Assessment_Report_2">here</a><br>
                             <br>
-                            There are always additional steps that can be taken to continue securing my domain controller and Active Directory enviornment.<br>
-                            Please check back in to note the additional progress being made within my home lab enviornment.<br>
+                            There are always additional steps that can be taken to continue securing my domain controller and Active Directory environment.<br>
+                            Please check back in to note the additional progress being made within my home lab environment.<br>
+                        </p>
+                    </section>
+
+                    <section id="section18">
+                        <!--LAPS & Software Deployment-->
+                        <h2>Local Administrator Password Solution & Remote Software Deployment</h2>
+                        <p>
+                            <b>LAPS Setup</b><br>
+                            LAPS or Local Administrator Password Service is a very useful Active Directory addin that allows you to generate temporary local administrator passwords for endpoints within your domain.<br>
+                            These credentials can be used as temporary randomized administrative passwords.<br>
+                            I set up permissions for this service using PowerShell and used GPO software installation to deploy it to all machines in my domain.<br>
+                            I installed LAPS from <a href="https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-overview">Microsoft's website</a> using a domain administrator account.<br>
+                            Using PowerShell, I then imported the necessary module:<br>
+                            &nbsp;&nbsp;<i>import-module AdmPwd.PS</i><br>
+                            I then updated my domain schema:<br>
+                            &nbsp;&nbsp;<i>Update-AdmPwdADSchema</i><br>
+                            I updated permissions for the endpoints on my network to allow for LAPS to work:<br>
+                            &nbsp;&nbsp;<i>Set-AdmPwdComputerSelfPermission -OrgUnit DomainComputers</i><br>
+                            *The OU containing my computers is called 'DomainComputers', you will need to specify the name of your OU(s) at the end and run the cmdlet once for each.<br>
+                            I then created a security group for LAPS administrators and added the domain administrators security group.<br>
+                            I allowed everyone in that security group permission to view LAPS passwords:<br>
+                            &nbsp;&nbsp;<i>Set-AdmPwdReadPasswordPermission -Identity DomainComputers -AllowedPrincipals "LAPSAdmins"</i><br>
+                            *Your OU and security groups will be named differently.<br>
+                            <br>
+                            <b>Remote software deployment</b>
+                            I then made the LAPS executable available to all of my workstations via a network drive.<br>
+                            I created a new Group Policy object titled DeployLAPS.<br>
+                            Within this object, I created a software installation package:<br>
+                            Edit GPO > Computer Configuration > Policies > Software Settings > Software Installation > New (select the MSI file from the network location)<br>
+                            Then I set up LAPS for the endpoints on my domain:<br>
+                            Computer Configuration > Policies > Administrative Templates > LAPS Enable Local Password Management > Enable Password Settings > Change complexity settings to your liking<br>
+                            Do not allow password expiration time longer than required > Enable<br>
+                            *This will force a new password change after the previous one expires.<br>
+                            Name of administrator account to manage > change if local admin is named something else.<br>
+                            I then linked the DeployLAPS GPO to the OU containing my domain computers.<br>
+                            I connected to my endpoint VM to force a group policy update. This was just to speed things along within my domain. In reality, you can allow the GPUpdates to process after a day or so.<br>
+                            I ran a forced group policy update and restarted the endpoint and forced another group policy update.<br>
+                            To view the local password for a domain computer, do the following:<br>
+                            Within Active Directory, navigate to the OU containing your domain computers, right-click one > Properties > Attribute Editor > Scroll to ms-Mcs-AdmPwd<br>
+                            The password is visible here and searchable by machine name using the LAPS UI.<br>
+                            <br>
+                            <img height="500" width="800" src="./Content/LAPS/LAPS.png" alt="LAPS">
+                        </p>
+                    </section>
+
+                    <section id="section19">
+                        <!--Splunk-->
+                        <h2>Splunk</h2>
+                        <p>
+                            Splunk is a big data platform that allows you to pull and manipulate data from an array of different machines.<br>
+                            I will be using it to pull security logs from my virtual endpoints.<br>
+                            To get started, I will set up the collection of local logs.<br>
+                            I installed Splunk Enterprise from their <a href="https://www.splunk.com/en_us/download/splunk-cloud.html">website</a>.<br>
+                            <img height="500" width="800" src="./Content/Splunk/login_screen.png" alt="login_screen"><br>
+                            <br>
+                            To set up logs to be ingested by Splunk, I did the following:<br>
+                            Settings>Data inputs Local event log collection (Edit)<br>
+                            Add the logs you would like to collect. In my case, they were Application, System, and Security.<br>
+                            Apps > Search and reporting<br>
+                            You can make searches and specific queries for logs here<br>
+                            I then cleared the Security logs within event viewer to create a specific log that I would like to search for.<br>
+                            I filtered the search results by specifying the host machine, source of the log, and event code to pull the log clearing event from my machine's logs!<br>
+                            <img height="500" width="800" src="./Content/Splunk/search.png" alt="search"><br>
+                            I configured a search query to find when the security logs are cleared on my domain controller.<br>
+                            * host=DC source="WinEventLog:Security" "EventCode=1102"<br>
+                            To set up an alert, I did the following:<br>
+                            On the Search and Reporting screen > Save as > Alert > Configure the alert settings.<br>
+                            <img height="400" width="700" src="./Content/Splunk/alerts.png" alt="alerts"><br>
+                            I set up a high-priority alert for DC logins and a critical alert for when someone clears the security logs.<br>
+                            To add to the list of triggered alerts to be referenced later. I also configured the alert to update me via email.<br>
+                            <img height="400" width="700" src="./Content/Splunk/alert_logs.png" alt="alert_logs"><br>
+                            <br>
+                            <br>
+                            <b>Splunk on remote machines (Universal Forwarder setup / viewing)</b>
+                            <br>
+                            I started by enabling tcp port 9997 to accept forwarded logs from my endpoints.<br>
+                            <img src="./Content/Splunk/firewall.png" alt="firewall"><br>
+                            <br>
+                            I then set up forwarding on my Splunk Index by doing the following:<br>
+                            Settings>Forwarding and receiving > Configure recieveing > New receiving port > 9997 > save<br>
+                            I then discovered that I would need to enable a firewall rule for my endpoints to allow outbound traffic from port 9997.<br>
+                            <br>
+                            I then installed the universal forwarder on my endpoint. This step can be completed en masse using a Group Policy Object (for example, see my LAPS post) or manually.<br>
+                            In this case, I chose to install it manually.<br>
+                            You need to be sure to select the correct IP and port number for the indexer.<br>
+                            <img height="300" width="600" src="./Content/Splunk/hostURL.png" alt="hostURL"><br>
+                            <img height="300" width="600" src="./Content/Splunk/UF_setup.png" alt="UF_setup"><br>
+                            I actually set up the universal forwarder using port 9997 as it is preferred.<br>
+                            There were several issues preventing the Universal Forwarder from pushing logs to the Indexer on my domain.<br>
+                            These troubleshooting steps are listed below:<br>
+                            <ul>
+                                <li>Enabled the WMI service on the remote host.</li>
+                                <li>Configured Splunk FWD service on a remote machine using an admin account.</li>
+                                <li>Set a Domain admin logon for Splunkd service on DC.</li>
+                                <li>I actually used a GMSA account that was added to the correct security group.</li>
+                                <li>Created data input using the remote host's IP.</li>
+                            </ul>
+                            <img height="300" width="600" src="./Content/Splunk/logs.png" alt="logs"><br>
+                            I was ecstatic that the logs populated as troubleshooting took several days.<br>
+                        </p>
+                    </section>
+
+                    <section id="section20">
+                        <!--Firewall-->
+                        <h2>pfSense Firewall</h2>
+                        <p>
+                            I set up my pfSense VM and attached another VM to its LAN.<br>
+                            Set the interface IP address:<br>
+                            I set up the LAN IPv4 address as 192.168.50.1 and gave it a subnet mask of 255.255.255.0 by entering a bit count of 24. I then set up the DHCP address range of 192.168.20 - 192.168.250 and selected yes on the web configurator option.<br>
+                            <ur>
+                                <li>Choose option 2, Set interface(s) IP address</li>
+                                <li>Select option 2, LAN</li>
+                                <li>Select n, manually set it</li>
+                                <li>Enter a valid gateway address (mine is 192.168.50.1)</li>
+                                <li>Enter 24, Select the subnet mask of 225.225.225.0</li>
+                                <li>Enter, We do not want a WAN upstream gateway</li>
+                                <li>Enter, We do not want a LAN upstream gateway either</li>
+                                <li>n, We do not want a IPV6 LAN interface</li>
+                                <li>Enter, To select no LAN IPv6 address</li>
+                                <li>y, We want to enable the DHCP server on LAN</li>
+                                <li>Enter a valid IPv4 address start range (mine is 192.168.50.20)</li>
+                                <li>Enter a valid IPv4 address start range (mine is 192.168.50.250)</li>
+                                <li>y, We definitely want to set up the webConfigurator</li>
+                                <li>Enter, to accept changes</li>
+                                <li>I then added a quick virtual machine to my routed network.</li>
+                            </ur>
+                            <img height="500" width="800" src="./Content/Firewall/assignedAddress.png" alt="assignedAddress"><br>
+                            Easy as pie, it has taken a DHCP-assigned address on my network. The first available address, in fact.<br>
+                            I was able to ping the device as well.<br>
+                            <img src="./Content/Firewall/ping.png" alt="ping"><br>
+                            Thankfully, I was able to access the router via it's IP address in Firefox. I love having a colorful GUI to make configurations on.<br>
+                            <img height="500" width="800" src="./Content/Firewall/routerGUI.png" alt="routerGUI"><br>
+                            Please ignore my old GPU, it can still run VMs and most games.<br>
+                            I can ping external websites, but I cannot resolve hostnames.<br>
+                            I believe I need to set up DNS on my router.<br>
+                            Within the router web interface, I set Cloudflare's public DNS server (1.1.1.1) as the routing DNS for my selected DNS server.<br>
+                            System>General Setup > DNS Servers: 1.1.1.1 > Save<br>
+                            <img height="400" width="1000" src="./Content/Firewall/dns.png" alt="dns"><br>
+                            I can now successfully perform domain name translation!<br>
+                            pfSense has so many awesome features that I am excited to explore.<br>
+                            One example is the NIDS that I set up using pfSense's webConfigurator.<br>
+                            Please find that article <a onclick="section21()">here</a>.<br>
+                        </p>
+                    </section>
+
+                    <section id="section21">
+                        <!--NIDS-->
+                        <h2>Network Intrusion Detection System (Snort)</h2>
+                        <p>
+                            I set up a network intrusion detection system using Snort, an opensource NIDS that has a convenient add-in for pfSense!<br>
+                            Snort documentation is available <a href="https://docs.netgate.com/pfsense/en/latest/packages/snort/index.html">here</a>.<br>
+                            To install Snort, I completed the steps listed below.<br>
+                            From pfSense's webconfigurator, System > Packages > Search: Snort > Install<br>
+                            To setup Snort:<br>
+                            Services > Snort > Global Settings > Enable Snort VRT<br>
+                            *You need to sign up for a free snort account <a href="https://www.snort.org/users/sign_up">here</a>. (The signature definitions on the free version are 30 days old)<br>
+                            Copy in your Oinkmaster code that is made available after registering an account.<br>
+                            Enable Snort GPLv2 to add community rules to add extra signature definitions for free.<br>
+                            Enable ET Open to add emerging threat definitions.<br>
+                            Enable OpenAPPID to see what apps are being used.<br>
+                            Enable APPID Open text rules.<br>
+                            Enable FEODO Tracker Botnet C2 IP Rules for botnet definitions.<br>
+                            Set your rules update interval to something appropriate like once a day. That way new definitions are added daily.<br>
+                            Remove Blocked Host Interval- blacklisted hosts will be blocked. I prefer for them to be that way, so I will leave it as never.<br>
+                            Now we will need to download the most current signature rulesets:<br>
+                            Updates > Update Rules > Save<br>
+                            <img height="500" width="800" src="./Content/NIDS/setup.png" alt="setup"><br>
+                            We must now add and configure the interfaces we will be working with:<br>
+                            If you are running any VPNs, you will want to add them here.<br>
+                            Snort Interfaces > Enable Interface > Select the appropriate interface (mine will be WAN since I do not care as much about monitoring internal traffic)<br>
+                            Block Offenders > Enable >IP to block: SRC, so you do not accidentally allow for a DoS > Save<br>
+                            (I will not be blocking IPS as I will use a resource to repeatedly test my NIDS)<br>
+                            WAN Categories > Use IPS Policy > Enable (This will allow the rulesets that we downloaded earlier) > IPS Policy Selection: Security (For this use case) > Select the appropriate rulesets you would like to be monitored. (I selected All, but you can fine tune these definitions)<br>
+                            WAN Rules > Category Selection: IPS Policy - Security > Apply<br>
+                            *Ensure that you give this step enough time to apply.<br>
+                            <img height="350" width="650" src="./Content/NIDS/rulesets.png" alt="rulesets"><br>
+                            Feeling more secure by the second.<br>
+                            WAN Preprocs > Enable Auto Rule Disable (If a rule is depreciated or causing issues, it will automatically be disabled) > Save<br>
+                            WAN IP Rep > Enable IP Reputation (This allows Snort to check an IP's reputation to judge the address) > Save<br>
+                            Snort Interfaces > Select the play button on your chosen interface(s)<br>
+                            *You should see a green check if it is enabled<br>
+                            <img height="150" width="600" src="./Content/NIDS/completed_setup.png" alt="completed_setup"><br>
+                            Now that our IDS is set up, we can test it!<br>
+                            I used a service I found on GitHub to do so - <a href="https://github.com/3CORESec/testmynids.org">test my NIDS</a>.<br>
+                            I then ran option 10, Anonymous filesharing website<br>
+                            <img height="600" width="900" src="./Content/NIDS/tmNIDS.png" alt="tmNIDS"><br>
+                            It worked! An alert appeared on within Snort.<br>
+                            <img height="600" width="900" src="./Content/NIDS/alert.png" alt="alert"><br>
+                            If the Block Offenders option under WAN Settings is enabled, subsequent requests from the above IP will not be permitted.<br>
+                        </p>
+                    </section>
+
+                    <section id="section22">
+                        <!--GMSA-->
+                        <h2>Group Managed Service Accounts</h2>
+                        <p>
+                            Group Managed Service accounts are Active Directory-managed accounts used to provide permissions for applications and services.<br>
+                            These accounts cannot be signed into, and they have very secure revolving passwords.<br>
+                            It is good practice to use GMSAs for system services. I implemented a GMSA for the <a onclick="section19()">Splunk</a> services running on my Domain Controller and endpoints.<br>
+                            <br>
+                            All of the setup for a Window's GMSA can be completed via PowerShell. Please see the steps below:<br>
+                            Allow KDS service to generate passwords for MSAs.<br>
+                            &nbsp;&nbsp;<i>Add-KdsRootKey –EffectiveTime ((get-date).addhours(-10))</i><br>
+                            *it takes 10 hours, so we will need to add -10 hours.<br>
+                            In a production enviornment, we want to give it 10 hours to propigate to other DCs, so we would run:<br>
+                            &nbsp;&nbsp;<i>(Add-KDSRootKey -EffectiveImmediately)</i><br>
+                            You may need to run the following script to update the encryption type:<br>
+                            Set-ADServiceAccount -Identity svc_Splunk -KerberosEncryptionType AES256,RC4<br>
+                            Now we will add the GMSA:<br>
+                            &nbsp;&nbsp;<i>New-ADServiceAccount -name svc_Splunk -DNSHostName</i><br>
+                            *(my service account is svc_Splunk & the dnshost is DC.mydomain.com)<br>
+                            Allow the account to obtain the generated password:<br>
+                            &nbsp;&nbsp;<i>Set-ADServiceAccount -Identity 'svc_Splunk' PrincipalsAllowedToRetrieveManagedPassword DC$</i><br>
+                            *You should add via security group if the account will run on multiple machines.<br>
+                            Set the GMSA using an administrator or give it local admin on a dedicated server<br>
+                            Set the GMSA as the logon account for the desired service<br>
+                            <img height="400" width="700" src="./Content/GMSA/services.png" alt="services"><br>
                         </p>
                     </section>
 
